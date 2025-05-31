@@ -16,7 +16,7 @@ theme:
     primary: blue
   font: false
   icon:
-    logo: :material-home-automation:
+    logo: material/home-automation
   language: fr
   features:
     - tabs
