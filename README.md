@@ -8,7 +8,7 @@ Cette documentation détaille comment j'ai configuré mon installation domotique
 
 ## Vue d'ensemble
 
-SmartHub est composé de plusieurs éléments:
+Mon SmartHub est composé de plusieurs éléments:
 
 - Une **infrastructure réseau** sécurisée et segmentée
 - Une **configuration Docker** pour déployer facilement les services
