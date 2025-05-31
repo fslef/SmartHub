@@ -1,25 +1,37 @@
-site_name: HomeLab Domotique
-site_url: https://fslef.github.io/SmartHub
-repo_url: https://github.com/fslef/SmartHub
+site_name: SmartHub
+site_description: 'Develop, Release and Operate Container Apps on AWS.'
+site_url: 'https://github.com/fslef/SmartHub'
+repo_name: 'aws/copilot-cli'
+repo_url: 'https://github.com/fslef/SmartHub'
+edit_uri: 'edit/mainline/site/content'
+docs_dir: 'site/content'
+site_dir: 'docs'
+
+
+nav:
+  - Home: index.en.md
+
+theme:
+  name: material
+  palette:
+    primary: blue
+  font: false
+  icon:
+    logo: material-home-automation
+  language: fr
+  features:
+    - tabs
+    - instant
+    - navigation.tabs
+
+markdown_extensions:
+  - meta
 
 plugins:
+  - search
   - i18n:
       default_language: fr
       languages:
         fr: Français
         en: English
-
-theme:
-  name: material
-  features:
-    - navigation.tabs
-    - content.code.annotate
-  language: fr
-
-nav:
-  - fr:
-    - Accueil: index.md
-    - Installation: installation.md
-  - en:
-    - Home: index.md
-    - Installation: installation.md
+      material_alternate: false

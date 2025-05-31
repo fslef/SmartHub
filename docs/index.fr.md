@@ -2,9 +2,7 @@ C'est mon fichier d'index
 
 # SmartHub - Ma maison connectée
 
-![SmartHub Logo](assets/images/smarthub-logo.png)
-
-Bienvenue dans la documentation de **SmartHub**, mon système de maison intelligente.
+Bienvenue dans la documentation de mon **SmartHub**, mon système de maison intelligente.
 
 Cette documentation détaille comment j'ai configuré mon installation domotique, depuis l'infrastructure réseau jusqu'aux automatisations quotidiennes.
 
