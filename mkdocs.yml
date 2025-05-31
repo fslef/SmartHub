@@ -1,0 +1,25 @@
+site_name: HomeLab Domotique
+site_url: https://fslef.github.io/SmartHub
+repo_url: https://github.com/fslef/SmartHub
+
+plugins:
+  - i18n:
+      default_language: fr
+      languages:
+        fr: Français
+        en: English
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - content.code.annotate
+  language: fr
+
+nav:
+  - fr:
+    - Accueil: index.md
+    - Installation: installation.md
+  - en:
+    - Home: index.md
+    - Installation: installation.md
