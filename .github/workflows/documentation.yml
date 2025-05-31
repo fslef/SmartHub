@@ -1,26 +1,22 @@
-# .github/workflows/deploy.yml
 name: Update SmartHub Docs
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
+    name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
+      - name: Checkout main
+        uses: actions/checkout@v2
 
-      - run: pip install mkdocs-material
-      - run: mkdocs build --site-dir site
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          REQUIREMENTS: docs/mkdocs-config/requirements.txt
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_FILE: docs/mkdocs-config/mkdocs.yml
+          REQUIREMENTS: docs/mkdocs-config/requirements.txt
