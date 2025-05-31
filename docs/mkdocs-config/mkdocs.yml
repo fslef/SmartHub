@@ -8,7 +8,7 @@ docs_dir: ".."
 site_dir: "../../site"
 
 nav:
-  - Home: index.en.md
+  - Home: index.fr.md
 
 theme:
   name: material
