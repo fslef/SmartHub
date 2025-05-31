@@ -29,11 +29,11 @@ markdown_extensions:
 plugins:
   - search
   - i18n:
-    languages:
-      - locale: fr
-        name: Français
-        build: true
-        default: true
-      - locale: en
-        name: English
-        build: true
+      languages:
+        - locale: fr
+          name: Français
+          build: true
+          default: true
+        - locale: en
+          name: English
+          build: true
