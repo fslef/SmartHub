@@ -31,6 +31,10 @@ plugins:
   - i18n:
       default_language: fr
       languages:
-        fr: Français
-        en: English
+        - locale: fr
+          name: Français
+          build: true
+        - locale: en
+          name: English
+          build: true
       material_alternate: false
