@@ -29,13 +29,12 @@ markdown_extensions:
 plugins:
   - search
   - i18n:
-      default_language: fr
-      languages:
+    languages:
         - locale: fr
-          name: Français
+          name: Francais
           build: true
-          default_language: true
+          default: true
         - locale: en
           name: English
           build: true
-      material_alternate: false
+          default: false
