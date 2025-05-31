@@ -16,7 +16,7 @@ theme:
     primary: blue
   font: false
   icon:
-    logo: mdi-home-automation
+    logo: home-automation
   language: fr
   features:
     - tabs
