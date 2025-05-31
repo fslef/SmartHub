@@ -1,11 +1,11 @@
 site_name: SmartHub
-site_description: 'Develop, Release and Operate Container Apps on AWS.'
-site_url: 'https://github.com/fslef/SmartHub'
-repo_name: 'aws/copilot-cli'
-repo_url: 'https://github.com/fslef/SmartHub'
-edit_uri: 'edit/mainline/site/content'
-docs_dir: '..'
-site_dir: '../../site'
+site_description: "Develop, Release and Operate Container Apps on AWS."
+site_url: "https://github.com/fslef/SmartHub"
+repo_name: "aws/copilot-cli"
+repo_url: "https://github.com/fslef/SmartHub"
+edit_uri: "edit/mainline/site/content"
+docs_dir: ".."
+site_dir: "../../site"
 
 nav:
   - Home: index.en.md
@@ -30,11 +30,11 @@ plugins:
   - search
   - i18n:
     languages:
-        - locale: fr
-          name: Francais
-          build: true
-          default: true
-        - locale: en
-          name: English
-          build: true
-          default: false
+      - locale: fr
+        name: Français
+        build: true
+        default: true
+      - locale: en
+        name: English
+        build: true
+        default: false
