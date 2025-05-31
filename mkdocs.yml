@@ -4,7 +4,7 @@ site_url: 'https://github.com/fslef/SmartHub'
 repo_name: 'aws/copilot-cli'
 repo_url: 'https://github.com/fslef/SmartHub'
 edit_uri: 'edit/mainline/site/content'
-docs_dir: 'site/content'
+docs_dir: 'docs'
 site_dir: 'docs'
 
 
