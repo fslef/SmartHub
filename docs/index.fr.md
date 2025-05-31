@@ -4,7 +4,7 @@ Bienvenue dans la documentation de mon SmartHub, mon système de maison intellig
 
 Cette documentation détaille comment j'ai configuré mon installation domotique, depuis l'infrastructure réseau jusqu'aux automatisations quotidiennes.
 
-## 💡 Motivations
+## :material-lightbulb-on: Motivations
 
 Ce projet est né d'un projet de construction de maison, qui m'a amené à repenser entièrement ma future installation domotique. J'utilise Home Assistant depuis août 2021, j'ai souhaité documenter cette nouvelle approche pour :
 
@@ -13,7 +13,7 @@ Ce projet est né d'un projet de construction de maison, qui m'a amené à repen
 - Créer une référence pour mes futures modifications et améliorations
 - Contribuer à la communauté
 
-## 🔍 Vue d'ensemble
+## :material-magnify: Vue d'ensemble
 
 Mon SmartHub est composé de plusieurs éléments :
 
@@ -22,7 +22,7 @@ Mon SmartHub est composé de plusieurs éléments :
 - Une installation Home Assistant avec des automatisations personnalisées
 - Des intégrations avec divers périphériques Zigbee
 
-## 🛠️ Technologies principales utilisées
+## :material-tools: Technologies principales utilisées
 
 Ce projet s'appuie sur plusieurs technologies clés :
 
@@ -34,7 +34,7 @@ Ce projet s'appuie sur plusieurs technologies clés :
     - **Grafana & InfluxDB** : pour la visualisation et le stockage des données de capteurs
     - Une solution de monitoring de sécurité pour surveiller et detecter tout événement de sécurité.
 
-## 🚀 Pour commencer
+## :material-rocket-launch: Pour commencer
 
 Pour explorer cette documentation :
 
