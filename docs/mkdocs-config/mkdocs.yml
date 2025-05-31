@@ -7,7 +7,6 @@ edit_uri: 'edit/mainline/site/content'
 docs_dir: 'docs'
 site_dir: 'docs'
 
-
 nav:
   - Home: index.en.md
 
