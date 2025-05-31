@@ -22,6 +22,7 @@ theme:
     - tabs
     - instant
     - navigation.tabs
+    - icons
 
 markdown_extensions:
   - meta
