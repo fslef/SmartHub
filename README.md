@@ -1,15 +1,11 @@
 # SmartHub - Ma Maison Connectée
 
-**SmartHub** centralise et automatise la gestion de votre maison connectée.
+Documentation pour **SmartHub**, un projet de gestion de maison connectée.
 
-## Statut Actuel
+## Statut
 
-Ce dépôt contient actuellement uniquement la documentation du projet. Les fichiers de code source et autres ressources seront ajoutés ultérieurement.
-
-## Contributions
-
-Les contributions sont les bienvenues ! Si vous souhaitez participer, veuillez ouvrir une issue ou soumettre une pull request.
+Uniquement la documentation pour l'instant. Le code source sera ajouté plus tard.
 
 ## Licence
 
-Ce projet est sous licence GNU GPLv3. Consultez le fichier `LICENSE` pour plus de détails.
+Sous licence GNU GPLv3.
