@@ -22,7 +22,7 @@ Mon SmartHub est composé de plusieurs éléments :
 - Une installation Home Assistant avec des automatisations personnalisées
 - Des intégrations avec divers périphériques Zigbee
 
-## :material-tools: Technologies principales utilisées
+## :material-tools: Principales technologies utilisées
 
 Ce projet s'appuie sur plusieurs technologies clés :
 
@@ -32,7 +32,7 @@ Ce projet s'appuie sur plusieurs technologies clés :
 - **MQTT** : protocole de messagerie léger pour l'Internet des objets
 - A l'étude
     - **Grafana & InfluxDB** : pour la visualisation et le stockage des données de capteurs
-    - Une solution de monitoring de sécurité pour surveiller et detecter tout événement de sécurité.
+    - Une **solution de monitoring de sécurité** pour surveiller et detecter tout événement de sécurité.
 
 ## :material-rocket-launch: Pour commencer
 
