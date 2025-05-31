@@ -1,4 +1,4 @@
-# 🏡 SmartHub - Ma maison connectée
+# :material-home-automation: SmartHub - Ma maison connectée
 
 Bienvenue dans la documentation de mon SmartHub, mon système de maison intelligente.
 
