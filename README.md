@@ -1,24 +1,15 @@
-# SmartHub - Ma maison connectée
+# SmartHub - Ma Maison Connectée
 
-![SmartHub Logo](assets/images/smarthub-logo.png)
+**SmartHub** centralise et automatise la gestion de votre maison connectée.
 
-Bienvenue dans la documentation de **SmartHub**, mon système de maison intelligente.
+## Statut Actuel
 
-Cette documentation détaille comment j'ai configuré mon installation domotique, depuis l'infrastructure réseau jusqu'aux automatisations quotidiennes.
+Ce dépôt contient actuellement uniquement la documentation du projet. Les fichiers de code source et autres ressources seront ajoutés ultérieurement.
 
-## Vue d'ensemble
+## Contributions
 
-Mon SmartHub est composé de plusieurs éléments:
+Les contributions sont les bienvenues ! Si vous souhaitez participer, veuillez ouvrir une issue ou soumettre une pull request.
 
-- Une **infrastructure réseau** sécurisée et segmentée
-- Une **configuration Docker** pour déployer facilement les services
-- Une **installation Home Assistant** avec des automatisations personnalisées
-- Des intégrations avec divers **périphériques Zigbee**
+## Licence
 
-## Pour commencer
-
-Pour explorer cette documentation:
-- Consultez la [Configuration Réseau](network.md) pour comprendre l'architecture
-- Découvrez la [Configuration Docker](docker.md) pour le déploiement des services
-- Explorez la [Configuration Home Assistant](homeassistant.md) pour les intégrations
-- Inspirez-vous des [Automatisations](automations.md) pour créer vos propres scénarios
+Ce projet est sous licence GNU GPLv3. Consultez le fichier `LICENSE` pour plus de détails.
