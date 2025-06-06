@@ -9,7 +9,9 @@ site_dir: "../../site"
 
 nav:
   - Home: index.fr.md
-  # - Infrastructure:
+  - Infrastructure:
+      - Virtualisation: virtualisation/virtualisation-home.fr.md
+      - Hardware: hardware/hardware-home.fr.md
   - Network: network/network-home.fr.md
   - Network-Configuration: network-config/network-configuration.fr.md
   - Virtualisation: virtualisation/virtualisation-home.fr.md
@@ -24,7 +26,7 @@ theme:
   language: fr
   features:
     # - tabs
-    # - instant 
+    # - instant
     # - navigation.tabs
     - navigation.sections
 
