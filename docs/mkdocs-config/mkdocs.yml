@@ -11,7 +11,7 @@ nav:
   - Home: index.fr.md
   - Infrastructure:
   - Network: network/network-home.fr.md
-    - Network-Configuration: network-config/network-configuration.fr.md
+  - Network-Configuration: network-config/network-configuration.fr.md
          # - Network-Devices: network-devices/network-devices.fr.md
   - Virtualisation: virtualisation/virtualisation-home.fr.md
           #- Virtualisation-Configuration: virtualisation-config/virtualisation-configuration.fr.md
@@ -24,9 +24,10 @@ theme:
     logo: material/home-automation
   language: fr
   features:
-    - tabs
-    - instant
-    - navigation.tabs
+    # - tabs
+    # - instant
+    # - navigation.tabs
+    - navigation.sections
 
 markdown_extensions:
   - meta
