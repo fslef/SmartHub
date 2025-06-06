@@ -8,12 +8,12 @@ docs_dir: ".."
 site_dir: "../../site"
 
 nav:
-  - Home: index.fr.md
+  - Home: 'index.fr.md'
   - Infrastructure:
-    - Virtualisation: virtualisation/virtualisation-home.fr.md
-    - Hardware: hardware/hardware-home.fr.md
-  - Network: network/network-home.fr.md
-  - Network-Configuration: network-config/network-configuration.fr.md
+    - Virtualisation: 'virtualisation/virtualisation-home.fr.md'
+    - Hardware: 'hardware/hardware-home.fr.md'
+  - Network: 'network/network-home.fr.md'
+  - Network-Configuration: 'network-config/network-configuration.fr.md'
 
 theme:
   name: material
