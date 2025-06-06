@@ -9,7 +9,14 @@ site_dir: "../../site"
 
 nav:
   - Home: index.fr.md
-
+  - Infrastructure:
+      - Network:
+          - Network-Overview: network/network-home.fr.md
+          - Network-Configuration: network-config/network-configuration.fr.md
+         # - Network-Devices: network-devices/network-devices.fr.md
+      - Virtualisation:
+          - Virtualisation-Overview: virtualisation/virtualisation-home.fr.md
+          #- Virtualisation-Configuration: virtualisation-config/virtualisation-configuration.fr.md
 theme:
   name: material
   palette:
