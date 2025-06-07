@@ -25,11 +25,11 @@ theme:
   icon:
     logo: material/home-automation
   language: fr
-  features:
+  #features:
     # - tabs
     # - instant
     # - navigation.tabs
-    - navigation.sections
+    # - navigation.sections
 
 markdown_extensions:
   - attr_list
