@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://github.com/fslef/SmartHub/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/hardware/domotique/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/hardware/domotique/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/hardware/domotique/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/hardware/virtualisation/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/hardware/virtualisation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/hardware/virtualisation/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/infra/network/network-home/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/infra/network/network-home/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/infra/network/network-home/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/infra/network/vlans/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/infra/network/vlans/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/infra/network/vlans/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/infra/virtualisation/virtualisation-homefr/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/infra/virtualisation/virtualisation-homefr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/infra/virtualisation/virtualisation-homefr/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/network-config/networking-hardware/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/network-config/networking-hardware/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/network-config/networking-hardware/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/en/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/en/hardware/domotique/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/hardware/domotique/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/hardware/domotique/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/en/hardware/virtualisation/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/hardware/virtualisation/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/hardware/virtualisation/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/en/infra/network/network-home/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/infra/network/network-home/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/infra/network/network-home/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/en/infra/network/vlans/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/infra/network/vlans/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/infra/network/vlans/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/en/infra/virtualisation/virtualisation-homefr/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/infra/virtualisation/virtualisation-homefr/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/infra/virtualisation/virtualisation-homefr/"/>
+    </url>
+    <url>
+        <loc>https://github.com/fslef/SmartHub/en/network-config/networking-hardware/</loc>
+        <lastmod>2025-06-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://github.com/fslef/SmartHub/en/network-config/networking-hardware/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://github.com/fslef/SmartHub/network-config/networking-hardware/"/>
+    </url>
+</urlset>
