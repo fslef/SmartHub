@@ -1,3 +1,6 @@
+
+# this is :material-home-automation: SmartHub - Ma maison connectée
+
 Bienvenue dans la documentation de mon SmartHub, mon système de maison intelligente.
 
 Cette documentation détaille comment j'ai configuré mon installation domotique, depuis l'infrastructure réseau jusqu'aux automatisations quotidiennes.
