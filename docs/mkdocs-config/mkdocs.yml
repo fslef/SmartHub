@@ -21,8 +21,8 @@ theme:
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  # icon:
-  #   logo: material/home-automation
+  icon:
+    logo: material/home-automation
   language: fr
   #features:
     # - tabs

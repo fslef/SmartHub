@@ -46,6 +46,7 @@ Créer des profils VLAN dans Unifi Network en vous basant sur :
 - Description : utiliser celle du tableau ci-dessus
 
 Regrouper dans des catégories logiques :
+
 - `infra-*`
 - `iot-*`
 - `user-*`
@@ -60,7 +61,6 @@ Regrouper dans des catégories logiques :
 | Port 4      | Cameras            | Access       |
 | Port 5      | NAS                | Trunk        |
 | Port 6      | Infra-Servers      | Trunk (Talos)|
-
 
 ## :material-ip: Plan d'adressage IP recommandé
 
