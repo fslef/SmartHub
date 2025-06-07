@@ -19,7 +19,9 @@ theme:
   name: material
   palette:
     primary: blue
-  font: false
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
   icon:
     logo: material/home-automation
   language: fr
@@ -30,7 +32,6 @@ theme:
     - navigation.sections
 
 markdown_extensions:
-  - meta
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
