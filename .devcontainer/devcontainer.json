@@ -1,0 +1,13 @@
+{
+  "name": "SmartHub DevContainer",
+  "image": "python:3.11",
+  "features": {},
+  "postCreateCommand": "pip install --upgrade pip && if [ -f docs/mkdocs-config/requirements.txt ]; then pip install -r docs/mkdocs-config/requirements.txt; fi",
+  "workspaceFolder": "/workspaces/smarthub",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspaces/smarthub,type=bind,consistency=cached"
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/local/bin/python"
+  }
+}
