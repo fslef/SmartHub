@@ -1,5 +1,4 @@
 site_name: SmartHub
-site_description: "Develop, Release and Operate Container Apps on AWS."
 site_url: "https://github.com/fslef/SmartHub"
 repo_name: "fslef/SmartHub"
 repo_url: "https://github.com/fslef/SmartHub"
@@ -22,8 +21,8 @@ theme:
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  icon:
-    logo: material/home-automation
+  # icon:
+  #   logo: material/home-automation
   language: fr
   #features:
     # - tabs
