@@ -1,6 +1,6 @@
 {
   "name": "SmartHub DevContainer",
-  "image": "python:3.11",
+  "image": "python:3.13",
   "features": {},
   "postCreateCommand": "pip install --upgrade pip && if [ -f docs/mkdocs-config/requirements.txt ]; then pip install -r docs/mkdocs-config/requirements.txt; fi",
   "workspaceFolder": "/workspaces/smarthub",
