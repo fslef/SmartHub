@@ -58,6 +58,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - info
   - i18n:
       languages:
         - locale: fr
