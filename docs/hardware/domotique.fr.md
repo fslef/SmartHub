@@ -1,6 +1,7 @@
 # Infrastructure virtuelle pour SmartHub
 
-> ⚠️ La solution retenue (Proxmox ou Docker avec Portainer) sera définie ultérieurement.
+!!! warning
+    La solution retenue (Proxmox ou Docker avec Portainer) sera définie ultérieurement.
 
 ## Critères de choix
 

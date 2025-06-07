@@ -1,6 +1,7 @@
 # Matériel réseau pour SmartHub
 
-> ⚠️ Ce document est un draft, les choix définitifs seront précisés ultérieurement.
+!!! Warning
+    Ce document est un draft, les choix définitifs seront précisés ultérieurement.
 
 ## Critères de choix
 
