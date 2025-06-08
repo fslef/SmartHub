@@ -1,0 +1,69 @@
+site_name: My SmartHub Documentation
+site_description: "Documenter mon SmartHub pour mon projet de maison intelligente"
+site_url: https://smarthub.fslef.net/
+repo_url: https://github.com/fslef/smarthub
+repo_name: fslef/SmartHub
+use_directory_urls: true
+extra:
+  path_prefix: ""
+
+theme:
+  name: material
+  icon:
+    logo: material/home-automation
+  language: fr
+  features:
+    - navigation.tabs
+    - toc.integrate
+    - navigation.tracking
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: fr
+          default: true
+          name: Français
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_description: "Documentating My SmartHub for my smart home project"
+          nav_translations:
+            Plateforme: Platform
+            Intégrations: Integrations
+            Automatisations: Automations
+
+nav:
+  - Home:
+      - index.md
+      - Inspiration: fr/inspiration.md
+  - Plateforme :
+      fr/plateform/index.md
+  - Intégrations :
+      fr/integrations/index.md
+  - Automatisations :
+      fr/automations/index.md
