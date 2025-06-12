@@ -10,15 +10,15 @@ export default defineConfig({
       { text: 'Home', link: '/' },
     ],
 
-    sidebar: [
-      {
-        text: 'Le projet',
-        items: [
-          { text: 'Mon besoin', link: '/projet' },
-          { text: 'Mes sources d\'inspiration', link: '/projet/inspiration' }
-        ]
-      }
-    ],
+    // sidebar: [
+    //   {
+    //     text: 'Le projet',
+    //     items: [
+    //       { text: 'Mon besoin', link: '/projet' },
+    //       { text: 'Mes sources d\'inspiration', link: '/projet/inspiration' }
+    //     ]
+    //   }
+    // ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/fslef/smarthub' }
