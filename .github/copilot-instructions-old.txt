@@ -1,0 +1,94 @@
+# 1. Objectif
+
+Définir les règles que Copilot doit respecter pour **créer ou modifier** des pages Markdown de la documentation **SmartHub** (générée par **MkDocs Material ≥ 9.5**).
+
+# 2. Répertoire cible (plugin i18n)
+
+```
+docs/
+  fr/
+    index.md                # Page d’accueil FR
+    plateforme/
+      index.md              # Matériel, virtualisation, réseau, services logiciels
+      <slug>.md
+    integrations/
+      index.md              # Connexions Home Assistant, MQTT, etc.
+      <slug>.md
+    automations/
+      index.md              # Exemples de scénarios domotiques
+      <slug>.md
+    assets/
+      <image>.png           # Images et schémas
+  en/                       # **réservé** : généré par workflow de traduction → NE PAS toucher
+```
+
+- Copilot écrit **uniquement** sous `docs/fr/` (documentation source en français).
+- Ne jamais créer/modifier de fichiers dans `docs/en/` ; ce répertoire est géré par un autre workflow de traduction.
+- Les *slugs* doivent suivre le format anglais : sans accent, kebab-case, pas d’espace (ex : `zigbee2mqtt-firmware.md`).
+- Les images sont stockées dans `docs/fr/assets/` et référencées par lien relatif avec texte alternatif descriptif.
+
+## 3. Style rédactionnel
+
+- **Langue :** Français technique, voix active, ≤ 20 mots/phrase.
+- **Tonalité :** experte, factuelle, sans marketing.
+- **Terminologie :** conserver les noms originaux (Home Assistant, Zigbee2MQTT, etc.).
+- **Majuscules titres :** *Sentence-case* (sauf noms propres).
+- **Documentation** : toujours en français, sauf noms propres ou extraits de code.
+
+## 4. Structure Markdown
+
+1. Un seul `# Titre H1` par page (première ligne).
+2. Utiliser H2/H3 hiérarchiques descriptifs.
+3. Ne jamais dupliquer le H1, même lors de modifications multiples.
+
+## 5. Composants MkDocs Material
+
+- **Admonitions :** `!!! note|warning|tip` (≤ 3/page, placer en début de section ou avant un bloc critique).
+- **Mermaid :** diagrammes d’architecture ou séquence ; placer après un H2, avec un titre `%%` commenté en première ligne.
+- **Blocs de code :** ```bash|yaml|json|powershell``` (triple backticks + langue).
+- **Onglets :** `tabs` pour variantes OS/firmware.
+- **Icônes :** `:material-<name>:`.
+
+## 6. Qualité & CI
+
+- `mkdocs build --strict` **sans** avertissement.
+- Markdownlint (config repo) doit passer.
+- Aucune ancre ou lien interne brisé (vérifier avec `mkdocs serve` ou plugin link-checker).
+- Texte alternatif pour chaque image (WCAG AA).
+
+## 7. Pull Requests générées par Copilot
+
+- **Label :** `documentation`.
+- **Message de commit :** `docs(<scope>): <résumé impératif>` (≤ 72 caractères).
+- **Exemple :** `docs(plateforme): ajoute guide installation Proxmox`
+
+### Vérifications automatiques
+
+- [ ] Le linter Markdown passe (`markdownlint`)
+- [ ] La commande `mkdocs build --strict` ne retourne aucun avertissement
+- [ ] Les liens internes fonctionnent (`mkdocs serve` ou plugin link-checker)
+- [ ] Une relecture humaine est prévue avant merge
+
+## 8. Bonnes pratiques spécifiques
+
+- Utiliser **liens relatifs** (ex. `[Installation](../howto/installing.md)`).
+- Préférer les listes à puces pour étapes d’action.
+- Pour les diagrammes, donner un titre `%%` commenté en première ligne Mermaid.
+- Alt-text d’image : expliquer la fonction (ex. *Schéma MQTT entre capteur et SmartHub*).
+- Ne jamais supprimer, renommer ou déplacer un fichier sans instruction explicite.
+
+## 9. Prompts exemples
+
+```
+1. Rédige la page howto/installing.md pour Debian 12.
+2. Ajoute un diagramme Mermaid montrant le flux MQTT des capteurs.
+3. Mets à jour integrations/zigbee2mqtt-firmware.md : ajout firmware 2025-04.
+```
+
+## 10. À ne jamais faire
+
+- Générer du contenu hors de `docs/fr`. sauf demande explicite de traduction
+- Supprimer ou renommer des fichiers existants sans instruction explicite.
+- Ajouter un titre H1 supplémentaire.
+- Émettre du texte explicatif sur ces instructions ; produire **uniquement** le Markdown demandé.
+- Utiliser le dossier `plateform/` (préférer `plateforme/`).

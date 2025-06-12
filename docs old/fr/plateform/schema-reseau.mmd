@@ -1,0 +1,15 @@
+graph TD
+    Internet((Internet))
+    UCG[Cloud Gateway Fiber UCG-Fiber]
+    Switch[Switch Pro Max 48 PoE]
+    AP1[Contrôleur Wi-Fi U7 Pro XG #1]
+    AP2[Contrôleur Wi-Fi U7 Pro XG #2]
+    HA[Home Assistant Yellow]
+    Docker[Lenovo ThinkCentre M700 Tiny]
+
+    Internet --> UCG
+    UCG --> Switch
+    Switch --> AP1
+    Switch --> AP2
+    Switch --> HA
+    Switch --> Docker
