@@ -1,27 +1,27 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/markdown
 {
-	"name": "MkDocs Editing",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "squidfunk/mkdocs-material",
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"redhat.vscode-yaml"
-			]
-		}
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install -r requirements.txt",
-	// Use 'postStartCommand' to run commands after the container starts.
-	"postStartCommand": "mkdocs serve"
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+  "name": "VitePress Dev",
+  // Use the official Node.js image (match your pipeline version if you like)
+  "image": "node:18",
+  // Recommend VS Code extensions for Vue/VitePress development
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vue.volar"
+      ]
+    }
+  },
+  // Forward the default VitePress dev server port
+  "forwardPorts": [
+  ],
+  // Optionally, run npm install automatically after the container is created
+  // If you don't have package.json yet, comment this out and run npm init -y manually
+  "postCreateCommand": "npm install",
+
+  // Optionally, run a command to start the VitePress dev server automatically
+  "postStartCommand": "npm run docs:dev -- --host"
+
+  // Set the workspace folder inside the container (default is fine for most projects)
+  // "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
 }
