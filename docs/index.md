@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Début de la visite -->
-      link: /getting-started
+      link: /projet/index.md
     - theme: alt
       text: 🇺🇸 / 🇬🇧 English here
       link: /en/index.md
