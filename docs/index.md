@@ -13,5 +13,6 @@ hero:
     - theme: alt
       text: 🇺🇸 / 🇬🇧 English here
       link: /en/index.md
-  ---
+
+---
 

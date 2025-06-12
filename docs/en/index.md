@@ -13,5 +13,6 @@ hero:
     - theme: alt
       text: 🇫🇷 Version française
       link: /index.md
+      
 ---
 
