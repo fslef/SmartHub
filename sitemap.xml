@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://smarthub.fslef.net/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/inspiration/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/inspiration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/inspiration/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/automations/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/automations/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/automations/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/integrations/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/integrations/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/integrations/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/plateform/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/plateform/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/plateform/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/en/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/en/automations/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/automations/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/automations/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/en/integrations/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/integrations/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/integrations/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/en/plateform/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/plateform/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/plateform/"/>
+    </url>
+    <url>
+        <loc>https://smarthub.fslef.net/en/inspiration/</loc>
+        <lastmod>2025-06-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://smarthub.fslef.net/en/inspiration/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://smarthub.fslef.net/inspiration/"/>
+    </url>
+</urlset>
