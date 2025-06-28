@@ -13,6 +13,7 @@ Il est probable que j'en oublie certains, alors n'hésitez pas à me suggérer d
 - [**InnoTechReview**](https://www.youtube.com/@InnoTechReview)
 - [**Choisir son alarme**](https://www.youtube.com/@choisir-son-alarme)
 - [**Domo-blog**](https://www.domo-blog.fr/domotique/news-domotique/)
+- [**My Canaletto**](https://www.canaletto.fr/)
 
 
 ## Créateurs anglophones
