@@ -20,7 +20,7 @@ Je ne déploierai pas dans cette maison intermédiaire toutes les automatisation
 
 ## Remerciements
 
-Tout d’abord, **merci aux créateurs de contenu** qui m’inspirent chaque jour. Tu peux consulter la liste de mes [sources d’inspiration](/projet/inspiration), qui m’aident à concevoir mon système domotique.
+Tout d’abord, **merci aux [créateurs de contenu](/projet/inspiration)** qui m’inspirent chaque jour pour concevoir mon système domotique. Sans leurs contenus, je ne serais certainement pas là où j’en suis aujourd’hui.
 
 ## Ce que je souhaite partager
 
