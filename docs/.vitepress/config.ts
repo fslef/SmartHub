@@ -9,7 +9,7 @@ export default defineConfig({
     config: (md) => {
       md.use(kroki, {
         entrypoint: process.env.KROKI_ENDPOINT ?? 'https://kroki.io',
-        imageFormat: 'svg',
+        imageFormat: 'png',
         useImg: true
       })
     }
