@@ -11,6 +11,9 @@ hero:
       text: Début de la visite -->
       link: /projet/index.md
     - theme: alt
+      text: Infrastructure
+      link: /infrastructure/
+    - theme: alt
       text: 🇺🇸 / 🇬🇧 English here
       link: /en/index.md
 
