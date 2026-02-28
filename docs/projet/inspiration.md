@@ -16,7 +16,6 @@ Il est probable que j'en oublie certains, alors n'hésitez pas à me suggérer d
 - [**My Canaletto**](https://www.canaletto.fr/)
 - [**Zatoufly**](https://www.youtube.com/@Zatoufly)
 
-
 ## Créateurs anglophones
 
 - [**Everything Smart Home**](https://www.youtube.com/@Everythingsmarthome)

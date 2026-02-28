@@ -1,22 +1,42 @@
 # Mon SmartHub – Ma maison connectée
 
+Bienvenue dans la documentation de mon SmartHub, mon projet de maison intelligente.
+Ce SmartHub est mon projet de maison connectée autour de Home Assistant.
+
+Les deux raisons principales qui font que je démarre ce projet aujourd’hui sont :
+
+- Je vais faire construire une maison, et c’est le bon moment pour planifier l’installation domotique dès le départ.
+- Rendre le quotidien plus agréable, plus simple et plus accessible pour ma femme, en situation de handicap.
+
+Je ne débute pas sur Home Assistant : je l’utilise depuis environ 5 ans, et je l’utilisais déjà dans ma précédente maison.
+
 ::: info
-**Statut du projet** : Ce projet s'inscrit dans le cadre d'une construction neuve, ce qui me permet de planifier et concevoir l'ensemble du système domotique dès le départ. J'en profite pour organiser chaque aspect de l'installation et documenter toutes les étapes. Le projet est actuellement en phase de préparation, avec les plans en cours avec le maître d’œuvre. La construction devrait se terminer mi-2026.
+**Statut du projet**
+
+Le projet de construction est en phase de préparation, et la construction devrait démarrer fin 2026.
+En attendant, je vis dans une maison en location et je vais me servir de cette étape intermédiaire pour expérimenter et planifier au mieux ma future installation. Je ne déploierai pas dans cette maison intermédiaire toutes les automatisations que je souhaite déployer dans ma future maison.
 :::
 
-Bienvenue dans la documentation de **SmartHub**, mon projet de maison intelligente.
+## Remerciements
 
-Ce guide partage mon expérience pour concevoir une installation domotique complète, de l’**infrastructure réseau** aux **automatisations** du quotidien.
+Tout d’abord, merci aux créateurs de contenu qui m’inspirent chaque jour. Tu peux consulter la liste de mes [sources d’inspiration](/projet/inspiration), qui m’aident à concevoir mon système domotique.
 
-Merci à toutes celles et ceux qui partagent leurs expériences et conseils en domotique. Ces ressources m'ont beaucoup inspiré pour ce projet, comme tu pourras le voir dans mes [sources d’inspiration](inspiration.md).
+## Ce que je souhaite partager
 
-## Pourquoi ce projet et ses objectifs ?
+J’utilise Home Assistant depuis environ cinq ans. J’ai déjà eu l’occasion d’expérimenter différentes intégrations, automatisations et installations.
+J’ai une idée assez précise de mon futur système domotique, et voici ce que j’aimerais partager avec toi au travers de cette documentation :
 
-J’ai voulu documenter cette nouvelle approche pour :
+Que ces éléments soient déjà en place ou prévus à terme :
+
+- Les principes généraux que je tente de suivre pour concevoir un système cohérent et aligné avec les bonnes pratiques.
+- Mes choix de matériel et d’infrastructure.
+- Les automatisations que je mets en place, ou que je prévois d’implémenter.
+
+## Objectifs du projet
+
+Je documente ce projet pour :
 
 - Créer une solution domotique **robuste**, **fiable** et **facile à maintenir**
 - Profiter des avantages d’une maison intelligente : **automatisation**, **confort**, **économies d’énergie**, **sécurité**
-- Rendre la maison plus **accessible** et **intuitive** pour ma femme en situation de **handicap**
-- **Partager** mes apprentissages avec la communauté et répondre à des besoins spécifiques liés au **handicap**
-
-**Home Assistant** est le cœur de mon installation. J'ai souhaité aller plus loin en documentant tout l'écosystème qui l'accompagne, afin de partager une vision d'ensemble concrète et accessible d'une solution domotique complète, depuis l'infrastructure réseau jusqu'aux automatisations avancées.
+- Rendre la maison plus **accessible** et **intuitive** pour une personne de mon foyer en situation de **handicap**
+- **Partager** mes apprentissages avec la communauté
