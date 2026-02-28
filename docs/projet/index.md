@@ -8,8 +8,6 @@ Les deux raisons principales qui font que je démarre ce projet aujourd’hui so
 - Je vais faire construire une maison, et c’est le bon moment pour planifier l’installation domotique dès le départ.
 - Rendre le quotidien plus agréable, plus simple et plus accessible pour ma femme, en situation de handicap.
 
-Je ne débute pas sur Home Assistant : je l’utilise depuis environ 5 ans, et je l’utilisais déjà dans ma précédente maison.
-
 ::: info
 **Statut du projet**
 
@@ -23,7 +21,7 @@ Tout d’abord, merci aux créateurs de contenu qui m’inspirent chaque jour. T
 
 ## Ce que je souhaite partager
 
-J’utilise Home Assistant depuis environ cinq ans. J’ai déjà eu l’occasion d’expérimenter différentes intégrations, automatisations et installations.
+J’utilise Home Assistant depuis 2021. J’ai déjà eu l’occasion d’expérimenter différentes intégrations, automatisations et installations.
 J’ai une idée assez précise de mon futur système domotique, et voici ce que j’aimerais partager avec toi au travers de cette documentation :
 
 Que ces éléments soient déjà en place ou prévus à terme :
