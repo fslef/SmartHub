@@ -25,8 +25,7 @@ export default defineConfig({
         text: 'Le projet',
         items: [
           { text: 'Mon besoin', link: '/projet' },
-          { text: 'Mes sources d\'inspiration', link: '/projet/inspiration' },
-          { text: 'Démo diagrammes', link: '/projet/diagrammes' }
+          { text: 'Mes sources d\'inspiration', link: '/projet/inspiration' }
         ]
       }
     ],

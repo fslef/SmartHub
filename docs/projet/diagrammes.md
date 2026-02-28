@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # Démo : diagrammes (Kroki + PlantUML)
 
 Cette page te montre comment écrire des diagrammes _diagram-as-code_ dans SmartHub.
