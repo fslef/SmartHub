@@ -12,7 +12,10 @@ Les deux raisons principales qui font que je démarre ce projet aujourd’hui so
 **Statut du projet**
 
 Le projet de construction est en phase de préparation, et la construction devrait démarrer fin 2026.
-En attendant, je vis dans une maison en location et je vais me servir de cette étape intermédiaire pour expérimenter et planifier au mieux ma future installation. Je ne déploierai pas dans cette maison intermédiaire toutes les automatisations que je souhaite déployer dans ma future maison.
+
+En attendant, je vis dans une maison en location et je vais me servir de cette étape intermédiaire pour expérimenter et planifier au mieux ma future installation.
+
+Je ne déploierai pas dans cette maison intermédiaire toutes les automatisations que je souhaite déployer dans ma future maison.
 :::
 
 ## Remerciements
