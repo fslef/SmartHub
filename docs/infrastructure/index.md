@@ -1,6 +1,6 @@
 # Infrastructure
 
-Cette section décrit brièvement l’infrastructure (matériel, réseau, stockage) sur laquelle tournent SmartHub et Home Assistant, pour que tu saches où vivent les services et où vont les données.
+Cette section décrit brièvement l’infrastructure (matériel, réseau, stockage) sur laquelle tournent SmartHub et Home Assistant.
 
 ## Vue d’ensemble
 
@@ -14,7 +14,7 @@ Tu détailleras la configuration (Docker, partages du NAS, segmentation réseau,
 
 ## Schéma de l’installation (C4)
 
-Le diagramme ci-dessous montre les éléments principaux et les flux essentiels : accès à l’interface Home Assistant, chemin réseau, et stockage persistant sur le NAS.
+Le diagramme ci-dessous montre les éléments principaux et leurs liens : calcul (hôte Docker), stockage (NAS) et réseau (UniFi).
 
 ```plantuml[Schéma C4 de l’infrastructure]
 @startuml
@@ -22,7 +22,6 @@ Le diagramme ci-dessous montre les éléments principaux et les flux essentiels 
 
 LAYOUT_TOP_DOWN()
 
-Person(admin, "Toi", "Administres et utilises Home Assistant")
 System_Ext(internet, "Internet", "Accès WAN")
 
 System_Boundary(lan, "Réseau local") {
@@ -36,8 +35,6 @@ System_Boundary(lan, "Réseau local") {
   System(nas, "NAS Synology", "Stockage", "Données persistantes des conteneurs et sauvegardes")
 }
 
-Rel(admin, ha, "Accède à l’interface", "LAN (Wi‑Fi ou filaire)")
-
 Rel(internet, gateway, "Fournit la connectivité")
 Rel(gateway, switch, "Réseau local")
 Rel(switch, ap, "Uplink")
@@ -46,7 +43,6 @@ Rel(switch, nas, "Ethernet")
 
 Rel(host, ha, "Héberge")
 Rel(ha, nas, "Lit/écrit", "Stockage persistant + sauvegardes")
-Rel(ha, internet, "Accède", "Mises à jour, intégrations cloud (si utilisées)")
 
 @enduml
 ```

@@ -18,6 +18,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Infrastructure', link: '/infrastructure/' },
     ],
 
     sidebar: [
