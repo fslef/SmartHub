@@ -22,17 +22,22 @@ Le diagramme ci-dessous montre les éléments principaux et leurs liens : calcul
 
 LAYOUT_TOP_DOWN()
 
-System_Ext(internet, "Internet", "Accès WAN")
+System_Ext(internet, "Internet", "WAN (FAI)", "Connexion fournie par ton opérateur")
 
 System_Boundary(lan, "Réseau local") {
-  Container(gateway, "Cloud Gateway UniFi", "Routeur / pare-feu", "Connexion WAN, routage, services réseau")
-  Container(switch, "Switch UniFi", "Switch", "Distribution réseau filaire")
-  Container(ap, "Borne Wi‑Fi UniFi", "Point d’accès", "Accès Wi‑Fi au réseau local")
+  Container(gateway, "Cloud Gateway UniFi", "Routeur / pare-feu", "Termine l’accès Internet, assure le routage et le filtrage")
 
-  Container(host, "Mini PC HP", "Hôte Docker", "Exécute les conteneurs")
-  Container(ha, "Home Assistant", "Conteneur", "Automatisation et supervision")
+  together {
+    Container(switch, "Switch UniFi", "Commutation Ethernet", "Relie les équipements filaires du réseau local")
+    Container(ap, "Borne Wi‑Fi UniFi", "Point d’accès Wi‑Fi", "Fournit l’accès Wi‑Fi au réseau local")
+  }
 
-  System(nas, "NAS Synology", "Stockage", "Données persistantes des conteneurs et sauvegardes")
+  together {
+    Container(host, "Mini PC HP", "Linux + Docker", "Machine hôte qui exécute les conteneurs")
+    System(nas, "NAS Synology", "Stockage réseau", "Données persistantes des conteneurs et sauvegardes Home Assistant")
+  }
+
+  Container(ha, "Home Assistant", "Conteneur", "Plateforme domotique : automatisations, intégrations, supervision")
 }
 
 Rel(internet, gateway, "Fournit la connectivité")
@@ -43,6 +48,10 @@ Rel(switch, nas, "Ethernet")
 
 Rel(host, ha, "Héberge")
 Rel(ha, nas, "Lit/écrit", "Stockage persistant + sauvegardes")
+
+' Indices de mise en page : garder certains éléments au même niveau
+switch -[hidden]-> ap
+host -[hidden]-> nas
 
 @enduml
 ```
