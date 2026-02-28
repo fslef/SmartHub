@@ -7,7 +7,7 @@ Il est probable que j'en oublie certains, alors n'hésitez pas à me suggérer d
 
 - [**Choisir son alarme**](https://www.youtube.com/@choisir-son-alarme)
 - [**Domo-blog**](https://www.domo-blog.fr/domotique/news-domotique/)
-- [[**Glooob Domo**]](https://www.youtube.com/@GlooobDomo)
+- [**Glooob Domo**](https://www.youtube.com/@GlooobDomo)
 - [**GuiPom**](https://www.youtube.com/@GuiPoM)
 - [**Howmation**](https://www.youtube.com/@Howmation)
 - [**InnoTechReview**](https://www.youtube.com/@InnoTechReview)
