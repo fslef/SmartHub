@@ -1,12 +1,12 @@
 # Mon SmartHub – Ma maison connectée
 
-Bienvenue dans la documentation de mon SmartHub, mon projet de maison intelligente.
-Ce SmartHub est mon projet de maison connectée autour de Home Assistant.
+Bienvenue dans la documentation de mon **SmartHub**, mon projet de maison intelligente.
+Ce SmartHub est mon projet de maison connectée autour de **Home Assistant**.
 
 Les deux raisons principales qui font que je démarre ce projet aujourd’hui sont :
 
 - Je vais faire construire une maison, et c’est le bon moment pour planifier l’installation domotique dès le départ.
-- Rendre le quotidien plus agréable, plus simple et plus accessible pour ma femme, en situation de handicap.
+- Ma femme est en situation de handicap, j'espère donc lui rendre la vie plus agréable avec certaines automatisations
 
 ::: info
 **Statut du projet**
@@ -17,7 +17,7 @@ En attendant, je vis dans une maison en location et je vais me servir de cette �
 
 ## Remerciements
 
-Tout d’abord, merci aux créateurs de contenu qui m’inspirent chaque jour. Tu peux consulter la liste de mes [sources d’inspiration](/projet/inspiration), qui m’aident à concevoir mon système domotique.
+Tout d’abord, **merci aux créateurs de contenu** qui m’inspirent chaque jour. Tu peux consulter la liste de mes [sources d’inspiration](/projet/inspiration), qui m’aident à concevoir mon système domotique.
 
 ## Ce que je souhaite partager
 
@@ -29,12 +29,3 @@ Que ces éléments soient déjà en place ou prévus à terme :
 - Les principes généraux que je tente de suivre pour concevoir un système cohérent et aligné avec les bonnes pratiques.
 - Mes choix de matériel et d’infrastructure.
 - Les automatisations que je mets en place, ou que je prévois d’implémenter.
-
-## Objectifs du projet
-
-Je documente ce projet pour :
-
-- Créer une solution domotique **robuste**, **fiable** et **facile à maintenir**
-- Profiter des avantages d’une maison intelligente : **automatisation**, **confort**, **économies d’énergie**, **sécurité**
-- Rendre la maison plus **accessible** et **intuitive** pour une personne de mon foyer en situation de **handicap**
-- **Partager** mes apprentissages avec la communauté
