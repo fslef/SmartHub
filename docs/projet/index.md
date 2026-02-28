@@ -24,8 +24,6 @@ Tout d’abord, **merci aux créateurs de contenu** qui m’inspirent chaque jou
 J’utilise Home Assistant depuis 2021. J’ai déjà eu l’occasion d’expérimenter différentes intégrations, automatisations et installations.
 J’ai une idée assez précise de mon futur système domotique, et voici ce que j’aimerais partager avec toi au travers de cette documentation :
 
-Que ces éléments soient déjà en place ou prévus à terme :
-
 - Les principes généraux que je tente de suivre pour concevoir un système cohérent et aligné avec les bonnes pratiques.
 - Mes choix de matériel et d’infrastructure.
 - Les automatisations que je mets en place, ou que je prévois d’implémenter.
