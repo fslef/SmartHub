@@ -1,6 +1,11 @@
+# DEPRECATED
+
+Ce fichier est conservé pour historique. Les instructions actives sont dans
+`.github/copilot-instructions.md` et `.github/instructions/*.md`.
+
 # 1. Objectif
 
-Définir les règles que Copilot doit respecter pour **créer ou modifier** des pages Markdown de la documentation **SmartHub** (générée par **MkDocs Material ≥ 9.5**).
+Définir les règles que Copilot doit respecter pour **créer ou modifier** des pages Markdown de la documentation **SmartHub** (ancienne version générée par **MkDocs Material** ; remplacée depuis par **VitePress**).
 
 # 2. Répertoire cible (plugin i18n)
 

@@ -1,9 +1,19 @@
 import { defineConfig } from 'vitepress'
+import kroki from '@kazumatu981/markdown-it-kroki'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My SmartHub",
   description: "My smart home ecosystem, for my connected house.",
+  markdown: {
+    config: (md) => {
+      md.use(kroki, {
+        entrypoint: process.env.KROKI_ENDPOINT ?? 'https://kroki.io',
+        imageFormat: 'svg',
+        useImg: true
+      })
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -15,7 +25,8 @@ export default defineConfig({
         text: 'Le projet',
         items: [
           { text: 'Mon besoin', link: '/projet' },
-          { text: 'Mes sources d\'inspiration', link: '/projet/inspiration' }
+          { text: 'Mes sources d\'inspiration', link: '/projet/inspiration' },
+          { text: 'Démo diagrammes', link: '/projet/diagrammes' }
         ]
       }
     ],

@@ -16,9 +16,9 @@ Instructions:
 
 
 Formatting notes:
-* The Markdown format is for MkDocs Material. Pay special attention to:
-  * Admonitions (e.g. !!! note)
-  * Code blocks (use correct indentation and language tags)
-  * Content tabs (see MkDocs Material documentation for syntax)
+* The Markdown format is for VitePress. Pay special attention to:
+  * Custom containers (e.g. `::: info`, `::: tip`, `::: warning`, `::: danger`)
+  * Code blocks (use correct language tags)
+  * Internal links (prefer root-relative, extensionless links)
 
-Source files are in docs/fr. Target files must be created in docs/en with the same filename.
+Source files are in docs/ (French root locale). Target files must be created in docs/en with the same filename (relative to docs/).

@@ -8,7 +8,7 @@ Offer a concise, self-contained reference for **one specific Home Assistant inte
 
 # Additional rules for “integration” pages
 
-- Write in **French** and edit `/docs/en/` only when explicitly asked to translate.
+- Write in **French** by default and edit `docs/en/` only when explicitly asked to translate.
 - Provide information **solely to contextualise the integration within a Home Assistant deployment**; omit generic or vendor-agnostic IoT advice.
 
 ## Required page outline

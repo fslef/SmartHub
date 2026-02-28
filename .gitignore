@@ -1,2 +1,9 @@
 docs/.vitepress/dist
 docs/.vitepress/cache
+
+# Node
+node_modules/
+npm-debug.log*
+
+# macOS
+.DS_Store
