@@ -19,6 +19,7 @@ Il est probable que j'en oublie certains, alors n'hésitez pas à me suggérer d
 ## Créateurs anglophones
 
 - [**Everything Smart Home**](https://www.youtube.com/@Everythingsmarthome)
+- [**Frenck**](https://frenck.dev)
 - [**Home Automation Guy**](https://www.youtube.com/@HomeAutomationGuy)
 - [**Mark Watt Tech**](https://www.youtube.com/@MarkWattTech)
 - [**Michael Leen**](https://www.youtube.com/@michaelsleen)
