@@ -70,7 +70,7 @@ export default defineConfig({
                       link: '/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology'
                     },
                     {
-                      text: 'ADR-0006 : Mises à jour via Renovate',
+                      text: 'ADR-0006 : Stratégie de mise à jour',
                       link: '/projet/design-guide/adr/adr-0006-gestion-mises-a-jour-docker-renovate'
                     }
                   ]
@@ -120,7 +120,7 @@ export default defineConfig({
                       link: '/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology'
                     },
                     {
-                      text: 'ADR-0006 : Mises à jour via Renovate',
+                      text: 'ADR-0006 : Stratégie de mise à jour',
                       link: '/projet/design-guide/adr/adr-0006-gestion-mises-a-jour-docker-renovate'
                     }
                   ]
