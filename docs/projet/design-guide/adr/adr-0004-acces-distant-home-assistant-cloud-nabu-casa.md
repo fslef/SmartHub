@@ -1,6 +1,6 @@
 ---
-title: "ADR-0001: Accès distant via Home Assistant Cloud (Nabu Casa)"
-status: "Proposed"
+title: "ADR-0004: Accès distant via Home Assistant Cloud (Nabu Casa)"
+status: "Accepted"
 date: "2026-02-28"
 authors: "Équipe SmartHub"
 tags:
@@ -12,11 +12,11 @@ supersedes: ""
 superseded_by: ""
 ---
 
-# ADR-0001 : Accès distant via Home Assistant Cloud (Nabu Casa)
+# ADR-0004 : Accès distant via Home Assistant Cloud (Nabu Casa)
 
 ## Status
 
-**Proposed** | Accepted | Rejected | Superseded | Deprecated
+Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
 
 ## Contexte
 

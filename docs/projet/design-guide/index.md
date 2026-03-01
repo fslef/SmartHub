@@ -18,13 +18,3 @@ Ces principes aident à trancher vite, sans réinventer des règles à chaque ch
 | **Documenter les décisions** | Quand un choix a un impact durable (réseau, sécurité, stockage, dépendances cloud), noter le contexte et la raison du choix pour éviter de “réapprendre” plus tard. |
 
 Ces principes directeurs sont complétés par des ADR (_Architecture Decision Records_) pour formaliser les décisions structurantes.
-
-Exemple : [ADR-0001 : Accès distant via Home Assistant Cloud (Nabu Casa)](/projet/design-guide/adr/adr-0001-acces-distant-home-assistant-cloud-nabu-casa), cohérent avec **Rester simple**.
-
-::: info ADR (_Architecture Decision Records_)
-Un ADR est un court document qui capture :
-
-- le **contexte** (ce qui a mené à décider)
-- la **décision** (ce qui est choisi)
-- les **conséquences** (ce que ça change, les compromis)
-:::

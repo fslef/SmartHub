@@ -143,9 +143,29 @@ For each alternative:
 
 **Guidelines:**
 
-- Link to related ADRs using relative paths
-- Include external resources that informed the decision
-- Reference relevant standards or frameworks
+**Link conventions (SmartHub):**
+
+- Prefer **site-root absolute links** (starting with `/`) for internal docs.
+  Example: `/projet/design-guide/adr/adr-0004-acces-distant-home-assistant-cloud-nabu-casa`.
+- Use clear link text (avoid bare URLs unless it improves clarity).
+- Only add links that help a future reader act or decide.
+
+**What to link (when relevant):**
+
+- **Related ADRs**: link to ADRs that this decision depends on, conflicts with, or complements.
+- **Superseding chain**: if the ADR replaces another, fill `supersedes` and link the old ADR;
+  if it is replaced, fill `superseded_by` and link the newer ADR.
+- **Principles / design guide**: link to `/projet/design-guide/` when the decision is justified
+  by one of the project principles.
+- **Implementation / infrastructure**: link to the page that shows “how it’s done” (for example
+  `/infrastructure/`) when it directly supports the decision.
+- **External documentation**: link to authoritative sources (official docs, standards, vendor
+  references) that informed the choice.
+
+**Navigation rule (SmartHub):**
+
+- Do **not** add a “back to ADR list” link at the top or bottom of each ADR.
+  Navigation is handled by the sidebar and the ADR index page.
 
 ---
 
@@ -163,7 +183,7 @@ For each alternative:
 
 ### Location
 
-All ADRs must be saved in: `/docs/adr/`
+All ADRs must be saved in: `/docs/projet/design-guide/adr/`
 
 ### Title Slug Guidelines
 
