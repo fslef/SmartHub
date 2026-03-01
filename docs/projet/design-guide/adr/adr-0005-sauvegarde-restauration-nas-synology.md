@@ -1,5 +1,4 @@
 ---
-title: "ADR-0005: Stratégie de sauvegarde et restauration sur NAS Synology"
 status: "Accepted"
 date: "2026-02-28"
 authors: "Équipe SmartHub"
@@ -19,10 +18,16 @@ superseded_by: ""
 
 Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
 
+Cet ADR décrit où stocker les sauvegardes Home Assistant et comment rendre la
+restauration fiable, y compris après un incident sur le site.
+
 ## Contexte
 
 Une maison connectée doit pouvoir se remettre d’une panne matérielle, d’une mise à
 jour problématique ou d’une erreur de configuration.
+
+Dans SmartHub, le NAS sert déjà de cible “durable” et bénéficie d’une sauvegarde
+sur un site distant, ce qui permet de réduire le risque lié à un sinistre local.
 
 Les contraintes principales sont :
 
@@ -35,6 +40,9 @@ Les contraintes principales sont :
 
 Stocker les sauvegardes Home Assistant sur un **NAS Synology**, via une cible de
 stockage réseau configurée côté Home Assistant.
+
+S’appuyer sur la **sauvegarde hors site du NAS** (déjà en place) pour inclure ce
+dossier de sauvegardes et couvrir le scénario “sinistre local”.
 
 Objectif : que la création, la planification et la restauration des sauvegardes
 restent pilotées depuis Home Assistant, tout en externalisant les fichiers sur un
@@ -57,8 +65,9 @@ stockage du foyer.
 - **NEG-001**: Dépendance au NAS (disponibilité, volume, permissions).
 - **NEG-002**: Une mauvaise configuration de partage réseau peut exposer des
   données (droits trop larges).
-- **NEG-003**: Sans copie hors site, un sinistre local (vol, incendie) peut
-  impacter à la fois le hub et le NAS.
+- **NEG-003**: Dépendance à la chaîne de sauvegarde hors site du NAS (fenêtre de
+  sauvegarde, bande passante, supervision) pour couvrir le risque “sinistre
+  local”.
 
 ## Alternatives envisagées
 
@@ -94,12 +103,15 @@ stockage du foyer.
   (nombre de sauvegardes, fenêtre glissante).
 - **IMP-005**: Tester une restauration de bout en bout à intervalles réguliers
   (au moins après un changement majeur) et documenter le pas-à-pas.
-- **IMP-006**: Optionnel : ajouter une copie hors site (second stockage, coffre
-  chiffré) si le risque “sinistre local” est jugé critique.
+- **IMP-006**: Vérifier que le dossier de sauvegardes Home Assistant est inclus
+  dans la sauvegarde du NAS vers le site distant.
+- **IMP-007**: Optionnel : chiffrer la sauvegarde hors site si ce n’est pas déjà
+  le cas.
 
 ## Références
 
-- **REF-001**: ADR-0001 : Type d’installation Home Assistant : Docker — impacte
-  la méthode de restauration.
+- **REF-001**: [ADR-0001](/projet/design-guide/adr/adr-0001-installation-home-assistant-stack-docker)
+  : Type d’installation Home Assistant : Docker — impacte la méthode de
+  restauration.
 - **REF-002**: Home Assistant — Backups (documentation officielle) :
-  https://www.home-assistant.io/common-tasks/os/#backups
+  <https://www.home-assistant.io/common-tasks/os/#backups>

@@ -19,6 +19,9 @@ superseded_by: ""
 
 Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
 
+Cet ADR décrit comment segmenter le réseau domestique pour isoler les objets
+connectés et rendre les flux réseau plus explicites.
+
 ## Contexte
 
 Les équipements connectés (IoT, multimédia, invités) ont des profils de risque et
@@ -33,10 +36,10 @@ Objectifs :
 
 ## Décision
 
-Segmenter le réseau en VLANs dédiés, avec un filtrage inter-VLAN par défaut
+Segmenter le réseau en VLAN dédiés, avec un filtrage inter-VLAN par défaut
 restrictif.
 
-VLANs existants :
+VLAN existants :
 
 - **Default** — VLAN **1** — `10.0.10.0/24`
 - **Trusted** — VLAN **62** — `10.0.62.0/24`
@@ -50,6 +53,11 @@ Principe de filtrage :
 - **Deny inter-VLAN par défaut**.
 - Ouverture **au cas par cas**, en privilégiant les flux vers les services “cœur”
   (Home Assistant, DNS, NTP) plutôt que des ouvertures larges.
+
+Prérequis implicites :
+
+- Un routeur/firewall capable de filtrer entre VLAN.
+- Des équipements réseau managés (switch et Wi-Fi) capables de porter des VLAN.
 
 ## Conséquences
 
@@ -68,6 +76,8 @@ Principe de filtrage :
   relais/reflector ou des règles spécifiques.
 - **NEG-003**: Un mauvais découpage peut ajouter de la friction (périphériques
   difficiles à appairer, casting, imprimantes).
+- **NEG-004**: Complexité matérielle : sans switch/AP managés, la segmentation est
+  difficile à déployer proprement.
 
 ## Alternatives envisagées
 
@@ -86,7 +96,7 @@ Principe de filtrage :
 
 ### Isolation extrême (un VLAN par catégorie d’IoT)
 
-- **ALT-005**: **Description**: Multiplier les VLANs (capteurs, caméras, TV,
+- **ALT-005**: **Description**: Multiplier les VLAN (capteurs, caméras, TV,
   assistants vocaux, imprimantes).
 - **ALT-006**: **Raison de rejet**: Complexité d’exploitation disproportionnée
   pour un gain marginal, en tension avec **Rester simple**.
@@ -103,11 +113,11 @@ Principe de filtrage :
   **Trusted (VLAN 62)** uniquement.
 - **IMP-005**: Pour les besoins de découverte (mDNS/SSDP), préférer une
   configuration explicite (reflector ciblé) plutôt que l’ouverture large entre
-  VLANs.
+  VLAN.
 - **IMP-006**: Journaliser temporairement les refus inter-VLAN lors des phases
   d’ajout de nouveaux appareils pour ajuster finement les règles.
 
 ## Références
 
 - **REF-001**: Guide de conception — principe **Rester simple** :
-  https://frenck.dev/the-enterprise-smart-home-syndrome/
+  <https://frenck.dev/the-enterprise-smart-home-syndrome/>

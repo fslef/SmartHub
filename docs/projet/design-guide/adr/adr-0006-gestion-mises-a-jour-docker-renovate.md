@@ -1,5 +1,4 @@
 ---
-title: "ADR-0006: Gestion des mises à jour via Git + pin mensuel + Renovate"
 status: "Accepted"
 date: "2026-02-28"
 authors: "Équipe SmartHub"
@@ -21,6 +20,9 @@ superseded_by: ""
 ## Status
 
 Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
+
+Cet ADR décrit une façon simple et traçable de gérer les mises à jour (images
+Docker et firmwares Zigbee), avec une cadence maîtrisée et un rollback possible.
 
 ## Contexte
 
@@ -117,7 +119,8 @@ un **Dockerfile/compose** :
 - **IMP-004**: Avant d’approuver une PR, lire le changelog officiel et vérifier
   les breaking changes.
 - **IMP-005**: Prévoir un rollback simple (revenir au tag précédent) et s’appuyer
-  sur les sauvegardes (voir ADR-0005).
+  sur les sauvegardes (voir
+  [ADR-0005](/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology)).
 - **IMP-006**: Pour Zigbee2MQTT, éviter de lancer plusieurs OTA en parallèle et
   privilégier des mises à jour quand le réseau est peu sollicité.
 - **IMP-007**: Si les notifications de disponibilité OTA deviennent du bruit,
@@ -126,10 +129,11 @@ un **Dockerfile/compose** :
 
 ## Références
 
-- **REF-001**: ADR-0005 : Stratégie de sauvegarde et restauration sur NAS Synology.
+- **REF-001**: [ADR-0005](/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology)
+  : Stratégie de sauvegarde et restauration sur NAS Synology.
 - **REF-002**: Renovate (documentation) :
-  https://docs.renovatebot.com/
+  <https://docs.renovatebot.com/>
 - **REF-003**: Home Assistant — Release notes :
-  https://www.home-assistant.io/blog/
+  <https://www.home-assistant.io/blog/>
 - **REF-004**: Zigbee2MQTT — OTA updates (documentation) :
-  https://www.zigbee2mqtt.io/guide/usage/ota_updates.html
+  <https://www.zigbee2mqtt.io/guide/usage/ota_updates.html>

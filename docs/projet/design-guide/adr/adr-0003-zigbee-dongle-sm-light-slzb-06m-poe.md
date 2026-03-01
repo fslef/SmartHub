@@ -1,5 +1,4 @@
 ---
-title: "ADR-0003: Coordinateur Zigbee via SM Light SLZB-06M (PoE)"
 status: "Accepted"
 date: "2026-02-28"
 authors: "Équipe SmartHub"
@@ -19,16 +18,26 @@ superseded_by: ""
 
 Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
 
+Cet ADR décrit le choix du coordinateur Zigbee et son positionnement, afin
+d’améliorer la couverture radio et la fiabilité au quotidien.
+
 ## Contexte
 
-La qualité du réseau Zigbee dépend fortement de la position du coordinateur et de
-la stabilité de la liaison entre le hub et le coordinateur.
+La qualité du réseau Zigbee dépend fortement de la position du coordinateur
+(couverture, obstacles) et de la stabilité de la liaison entre Home Assistant et
+le coordinateur.
+
+Dans un contexte domestique, le serveur qui héberge Home Assistant est souvent
+placé dans un endroit “pratique” (baie, bureau, placard réseau) mais pas
+forcément optimal pour la radio. À l’inverse, un coordinateur déporté et
+positionné au centre de la maison améliore généralement le maillage.
 
 Contraintes :
 
 - Optimiser la couverture radio (position centrale).
 - Éviter les câbles USB longs, les placements “contraints” et les perturbations.
 - Améliorer la maintenabilité (alimentation, redémarrage, remplacement).
+- Standardiser la connectique (Ethernet) et l’alimentation (PoE).
 
 ## Décision
 
@@ -70,7 +79,7 @@ placé **au centre de la maison** afin d’optimiser la couverture.
 ### Multiplier les coordinateurs
 
 - **ALT-005**: **Description**: Plusieurs coordinateurs pour “couvrir” la maison.
-- **ALT-006**: **Raison de rejet**: Architecture plus complexe, en tension avec
+- **ALT-006**: **Raison de rejet**: Architecture plus complexe, en contradiiction avec
   **Rester simple**.
 
 ## Notes d’implémentation
@@ -78,12 +87,14 @@ placé **au centre de la maison** afin d’optimiser la couverture.
 - **IMP-001**: Placer le SLZB-06M au centre de la maison, à distance des sources
   d’interférences (Wi-Fi, baie métallique, TV).
 - **IMP-002**: Prévoir une prise réseau dédiée et une alimentation PoE fiable.
-- **IMP-003**: Documenter l’adresse IP, le mode d’accès et la procédure de
-  remplacement en cas de panne.
+- **IMP-003**: Réserver une adresse IP (DHCP statique) et documenter l’adresse,
+  le mode d’accès et les informations utiles au dépannage.
+- **IMP-004**: Documenter la procédure de remplacement (y compris ce qui doit
+  être vérifié côté logiciel) en cas de panne.
 
 ## Références
 
 - **REF-001**: SM Light — SLZB-06M (documentation fabricant) :
-  https://smlight.tech/product/slzb-06m/
+  <https://smlight.tech/product/slzb-06m/>
 - **REF-002**: Guide de conception — principe **Rester simple** :
-  https://frenck.dev/the-enterprise-smart-home-syndrome/
+  <https://frenck.dev/the-enterprise-smart-home-syndrome/>
