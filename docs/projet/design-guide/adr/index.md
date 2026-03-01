@@ -47,6 +47,3 @@ Dans SmartHub, un ADR suit le même squelette :
 - **Contexte**
 - **Décision**
 - **Conséquences**
-
-Si tu utilises `Draft`, pense à le passer à `Proposed` dès que le périmètre est
-stable et qu’une validation est attendue.
