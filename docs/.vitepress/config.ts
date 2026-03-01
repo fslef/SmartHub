@@ -38,7 +38,7 @@ export default defineConfig({
         {
           text: 'Projet',
           items: [
-            { text: 'Vue d’ensemble', link: '/projet/' },
+            { text: 'Bienvenue', link: '/projet/' },
             { text: 'Inspiration', link: '/projet/inspiration' },
             {
               text: 'Guide de conception',
