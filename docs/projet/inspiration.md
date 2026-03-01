@@ -1,7 +1,7 @@
 # Sources d'inspiration
 
 Voici quelques créateurs et ressources qui ont joué un rôle important dans la conception de mon système domotique. Leur partage a grandement enrichi mon apprentissage, et je les en remercie sincèrement.
-Il est probable que j'en oublie certains, alors n'hésitez pas à me suggérer d'autres références.
+Il est probable que j'en oublie certains. N'hésitez pas non plus à me suggérer d'autres références.
 
 ## Créateurs francophones
 
