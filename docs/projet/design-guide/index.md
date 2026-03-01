@@ -1,6 +1,8 @@
 # Guide de conception
 
-Ce guide fixe des principes de conception pour garder SmartHub **stable**, **facile à maintenir** et **simple à faire évoluer** dans le temps, même quand les outils ou les intégrations changent.
+Ce guide fixe des principes de conception pour garder **mon SmartHub** **stable**,
+**facile à maintenir** et **simple à faire évoluer** dans le temps, même quand
+les outils ou les intégrations changent.
 
 Il sert aussi à **expliquer** certains choix structurants et à les **tracer** : quand une décision a un impact durable, elle est formalisée dans un ADR (_Architecture Decision Record_) pour conserver le contexte, la décision et ses compromis.
 

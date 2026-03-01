@@ -23,14 +23,13 @@ d’améliorer la couverture radio et la fiabilité au quotidien.
 
 ## Contexte
 
-La qualité du réseau Zigbee dépend fortement de la position du coordinateur
-(couverture, obstacles) et de la stabilité de la liaison entre Home Assistant et
-le coordinateur.
+La stabilité du réseau Zigbee dépend surtout du coordinateur : sa position
+(couverture, obstacles) et la qualité de la liaison avec Home Assistant.
 
-Dans un contexte domestique, le serveur qui héberge Home Assistant est souvent
-placé dans un endroit “pratique” (baie, bureau, placard réseau) mais pas
-forcément optimal pour la radio. À l’inverse, un coordinateur déporté et
-positionné au centre de la maison améliore généralement le maillage.
+Dans une maison, le serveur Home Assistant est souvent placé là où c’est pratique
+(baie, bureau), pas forcément là où la radio est bonne. L’enjeu est de pouvoir
+positionner le coordinateur au bon endroit, sans bricolage USB et sans fragiliser
+la connexion.
 
 Contraintes :
 
@@ -42,7 +41,7 @@ Contraintes :
 ## Décision
 
 Utiliser un coordinateur Zigbee **SM Light SLZB-06M**, **alimenté en PoE** et
-placé **au centre de la maison** afin d’optimiser la couverture.
+placé **au centre de la maison** pour optimiser la couverture.
 
 ## Conséquences
 
@@ -79,7 +78,7 @@ placé **au centre de la maison** afin d’optimiser la couverture.
 ### Multiplier les coordinateurs
 
 - **ALT-005**: **Description**: Plusieurs coordinateurs pour “couvrir” la maison.
-- **ALT-006**: **Raison de rejet**: Architecture plus complexe, en contradiiction avec
+- **ALT-006**: **Raison de rejet**: Architecture plus complexe, en contradiction avec
   **Rester simple**.
 
 ## Notes d’implémentation

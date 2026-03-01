@@ -1,5 +1,4 @@
 ---
-title: "ADR-0004: Accès distant via Home Assistant Cloud (Nabu Casa)"
 status: "Accepted"
 date: "2026-02-28"
 authors: "Équipe SmartHub"
@@ -20,34 +19,29 @@ Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
 
 ## Contexte
 
-L’accès à distance est nécessaire pour consulter l’état de la maison et piloter
-certains usages depuis l’extérieur (notifications, contrôle ponctuel, dépannage).
+L’accès distant sert à consulter, piloter et intervenir sur mon SmartHub depuis l’extérieur
+(mobile en 4G, voyage). L’enjeu principal est la sécurité : exposer Home Assistant
+sur Internet augmente la surface d’attaque et le risque d’erreur de configuration.
 
-Les contraintes principales sont les suivantes :
+Contraintes :
 
-- Réduire au minimum l’exposition d’un service sur Internet (pas de redirection de
-  ports “au hasard”, pas d’auto-hébergement complexe).
-- Préserver la confidentialité (chiffrement, minimisation des données transitant
-  côté tiers).
-- Maintenir une solution simple à opérer sur la durée (mises à jour, support,
-  diagnostics).
-- Favoriser, lorsque c’est raisonnable, une option qui soutient financièrement
-  l’écosystème Home Assistant.
+- Exposition minimale sur Internet (éviter les redirections de ports et la
+  complexité d’un auto-hébergement “à maintenir”).
+- Confidentialité : chiffrement et minimisation des données côté tiers.
+- Exploitation : solution simple à opérer (mises à jour, support, diagnostics).
+- Écosystème : si possible, soutenir financièrement Home Assistant.
 
 ## Décision
 
 Utiliser **Home Assistant Cloud**, fourni par **Nabu Casa**, pour l’accès distant
 à l’instance Home Assistant.
 
-Cette décision est motivée par :
+Critères de choix :
 
-- Une approche “service officiel” pensée pour éviter d’exposer directement
-  l’instance sur Internet.
-- Un positionnement explicite “privacy-first”.
-- Le fait que l’abonnement contribue au financement de la fondation et du travail
-  autour de l’Open Home.
-- Un alignement avec le principe **Rester simple** (éviter d’empiler des couches
-  d’infrastructure) : https://frenck.dev/the-enterprise-smart-home-syndrome/.
+- Éviter d’exposer directement Home Assistant sur Internet.
+- Approche “privacy-first” (chiffrement, minimisation côté tiers).
+- Exploitation simple et support officiel.
+- L’abonnement contribue au financement de Home Assistant et de l’Open Home.
 
 ## Conséquences
 
@@ -96,8 +90,9 @@ Cette décision est motivée par :
 
 ## Notes d’implémentation
 
-- **IMP-001**: Activer Home Assistant Cloud depuis **Paramètres > Home Assistant
--  Cloud** et finaliser l’association au compte Nabu Casa.
+- **IMP-001**: Activer Home Assistant Cloud depuis
+  **Paramètres > Home Assistant Cloud** et finaliser l’association au compte
+  Nabu Casa.
 - **IMP-002**: Vérifier l’absence de redirection de ports vers Home Assistant
   (et la supprimer si elle existe).
 - **IMP-003**: Activer l’authentification multifacteur sur le compte associé,
@@ -108,8 +103,8 @@ Cette décision est motivée par :
 ## Références
 
 - **REF-001**: Nabu Casa — Home Assistant Cloud :
-  https://www.nabucasa.com/
+  <https://www.nabucasa.com/>
 - **REF-002**: Nabu Casa — “Our commitment to Home Assistant” :
-  https://www.nabucasa.com/about/
+  <https://www.nabucasa.com/about/>
 - **REF-003**: Home Assistant — page “Home Assistant Cloud” :
-  https://www.home-assistant.io/cloud/
+  <https://www.home-assistant.io/cloud/>

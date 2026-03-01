@@ -23,13 +23,16 @@ restauration fiable, y compris après un incident sur le site.
 
 ## Contexte
 
-Une maison connectée doit pouvoir se remettre d’une panne matérielle, d’une mise à
-jour problématique ou d’une erreur de configuration.
+Sans sauvegarde exploitable, une panne matérielle, une mise à jour problématique
+ou une erreur de configuration rend le **retour arrière** (rollback) impossible.
+La remise en état repose alors sur une reconstruction et une reconfiguration,
+avec un risque plus élevé de pertes de données et de dérive.
 
-Dans mon SmartHub, le NAS sert déjà de cible “durable” et bénéficie d’une sauvegarde
-sur un site distant, ce qui permet de réduire le risque lié à un sinistre local.
+Dans mon SmartHub, le NAS est la cible “durable” et il est déjà sauvegardé sur un
+site distant. L’enjeu est de rendre la restauration simple et fiable, y compris
+en cas de perte du site.
 
-Les contraintes principales sont :
+Contraintes :
 
 - Disposer de sauvegardes automatiques, avec rétention.
 - Pouvoir restaurer rapidement, y compris sur un nouveau matériel.
@@ -38,15 +41,14 @@ Les contraintes principales sont :
 
 ## Décision
 
-Stocker les sauvegardes Home Assistant sur un **NAS Synology**, via une cible de
-stockage réseau configurée côté Home Assistant.
+Configurer Home Assistant pour stocker ses sauvegardes sur un **NAS Synology**
+(cible de stockage réseau).
 
-S’appuyer sur la **sauvegarde hors site du NAS** (déjà en place) pour inclure ce
-dossier de sauvegardes et couvrir le scénario “sinistre local”.
+Inclure ce dossier dans la **sauvegarde hors site du NAS** (déjà en place) pour
+couvrir le scénario “sinistre local”.
 
-Objectif : que la création, la planification et la restauration des sauvegardes
-restent pilotées depuis Home Assistant, tout en externalisant les fichiers sur un
-stockage du foyer.
+La création, la planification et la restauration restent pilotées depuis Home
+Assistant, tandis que les fichiers sont externalisés sur un stockage du foyer.
 
 ## Conséquences
 

@@ -4,7 +4,7 @@ Cette section regroupe les _Architecture Decision Records_ (ADR) du projet.
 
 Un ADR sert à **garder une trace courte d’un choix structurant** (réseau, sécurité,
 stockage, dépendances cloud), pour ne pas avoir à “réapprendre” plus tard
-pourquoi un compromis ou une décision ont été prise.
+pourquoi une décision a été prise et quels compromis ont été acceptés.
 
 Concrètement, un ADR capture, de manière concise et durable :
 
@@ -29,7 +29,7 @@ cohérent avec le frontmatter `status` de l’ADR).
 Dans chaque ADR, le status **actif** est surligné avec la syntaxe Markdown
 `==...==` (par exemple `==Accepted==`).
 
-Statuts utilisés Dans mon SmartHub :
+Statuts utilisés dans mon SmartHub :
 
 - `Draft` : brouillon. L’ADR peut changer à tout moment.
 - `Proposed` : décision proposée, pas encore validée.

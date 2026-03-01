@@ -21,45 +21,51 @@ superseded_by: ""
 
 Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
 
-Cet ADR décrit une façon simple et traçable de gérer les mises à jour (images
-Docker et firmwares Zigbee), avec une cadence maîtrisée et un rollback possible.
+Cet ADR décrit une façon simple et traçable de gérer les mises à jour de la stack
+(Home Assistant et services en conteneurs), avec une cadence maîtrisée et un
+rollback possible.
 
 ## Contexte
 
-Les mises à jour Home Assistant et des services associés apportent des correctifs
-et des évolutions, mais peuvent aussi introduire des breaking changes.
+Les mises à jour apportent des correctifs (dont sécurité) et des évolutions, mais
+elles peuvent aussi casser des intégrations ou changer des comportements.
 
-Au-delà des conteneurs, certains composants (par exemple Zigbee2MQTT) pilotent
-également des mises à jour de firmware “OTA” sur les appareils. Ces mises à jour
-ont un profil de risque différent : elles peuvent changer le comportement d’un
-appareil, sont longues et peuvent perturber le réseau Zigbee.
+Deux sujets distincts coexistent :
+
+- **Mises à jour de la stack** (Home Assistant et services en conteneurs) : on
+  veut rester à jour sans déployer “à l’aveugle”, garder une cadence maîtrisée et
+  pouvoir revenir en arrière.
+- **Mises à jour OTA Zigbee** (firmwares des équipements) : elles corrigent des
+  failles de sécurité, des bugs et améliorent parfois la stabilité ou la
+  compatibilité. Elles doivent être planifiées et pilotées séparément (durée,
+  perturbations possibles, comportement modifié).
 
 Objectifs :
 
-- Garder une cadence maîtrisée pour les versions “majeures” (mensuelles).
-- Mettre en production rapidement les correctifs intermédiaires (patches).
-- Garder une trace des changements via un flux Git (revue, historique).
-- Automatiser le plus possible, sans sacrifier la lisibilité.
+- Contrôler le déploiement des versions majeures (revue des breaking changes).
+- Déployer automatiquement les correctifs mineurs (patch).
+- Traçabilité via Git (revue, historique).
+- Automatisation sans perdre en lisibilité.
 
 ## Décision
 
-Gérer les mises à jour via un **repo Git** et une chaîne de déploiement basée sur
-un **Dockerfile/compose** :
+### Mises à jour de la stack (Home Assistant et conteneurs)
 
-- **Pin mensuel** de la version Home Assistant (version “du mois”).
+Gérer les mises à jour de la stack via un **repo Git** et une chaîne de
+déploiement basée sur un **Dockerfile/compose** :
+
 - **Renovate** ouvre une PR à chaque nouvelle release.
-- La PR est revue (en particulier les breaking changes), puis approuvée.
+- **Montée de version majeure contrôlée** : la PR est revue (en particulier les
+  breaking changes), puis approuvée manuellement.
 - Une tâche planifiée synchronise et déploie.
-- Les mises à jour intermédiaires (patch) associées au pin du mois sont déployées
-  automatiquement.
+- **Correctifs automatiques** : les mises à jour correctives (patch) de la
+  version validée sont déployées automatiquement.
 
-Étendre ce principe à Zigbee2MQTT et aux firmwares OTA :
+### Mises à jour OTA Zigbee (firmwares)
 
-- Les mises à jour **Zigbee2MQTT (conteneur)** suivent le même flux (Renovate,
-  PR, revue, déploiement).
-- Les mises à jour **OTA firmware** sont traitées comme des changements à risque
-  et restent **déclenchées de manière volontaire** (pas d’auto-déploiement
-  généralisé), idéalement pendant une fenêtre de maintenance.
+Les mises à jour **OTA firmware** sont
+**planifiées** (fenêtres de maintenance/campagnes) et **automatisées**
+(exécution), avec supervision.
 
 ## Conséquences
 
@@ -68,12 +74,11 @@ un **Dockerfile/compose** :
 - **POS-001**: Mises à jour structurées et traçables (PR, historique Git).
 - **POS-002**: Réduction du risque : revue explicite des breaking changes avant
   adoption.
-- **POS-003**: Correctifs intermédiaires appliqués rapidement, avec moins
-  d’effort.
+- **POS-003**: Correctifs appliqués rapidement, avec moins d’effort.
 - **POS-004**: Convergence avec l’objectif “infrastructure déclarative” (un état
   souhaité, un déploiement reproductible).
-- **POS-005**: Les OTA Zigbee sont gérées de façon prudente, réduisant le risque
-  de régressions difficiles à diagnostiquer.
+- **POS-005**: Les OTA Zigbee restent pilotées à part, avec une approche
+  prudente, réduisant le risque de régressions difficiles à diagnostiquer.
 
 ### Négatives
 
@@ -84,9 +89,11 @@ un **Dockerfile/compose** :
 - **NEG-003**: Complexité supplémentaire par rapport à une mise à jour “clic
   dans l’UI”.
 - **NEG-004**: Les OTA restent un effort ponctuel (fenêtre de maintenance,
-  surveillance), même si les images Docker sont automatisées.
+  surveillance) et ne bénéficient pas de la même automatisation que la stack.
 
 ## Alternatives envisagées
+
+Ces alternatives concernent les **mises à jour de la stack** (pas les OTA).
 
 ### Mise à jour manuelle au fil de l’eau
 
@@ -111,6 +118,8 @@ un **Dockerfile/compose** :
 
 ## Notes d’implémentation
 
+### Stack (Home Assistant et conteneurs)
+
 - **IMP-001**: Définir une convention claire de versioning dans le repo
   (fichier de versions, tag Docker, changelog minimal).
 - **IMP-002**: Configurer Renovate pour cibler explicitement les images
@@ -121,11 +130,16 @@ un **Dockerfile/compose** :
 - **IMP-005**: Prévoir un rollback simple (revenir au tag précédent) et s’appuyer
   sur les sauvegardes (voir
   [ADR-0005](/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology)).
-- **IMP-006**: Pour Zigbee2MQTT, éviter de lancer plusieurs OTA en parallèle et
-  privilégier des mises à jour quand le réseau est peu sollicité.
-- **IMP-007**: Si les notifications de disponibilité OTA deviennent du bruit,
+
+### OTA Zigbee (firmwares)
+
+- **IMP-006**: Planifier les OTA (fenêtres de maintenance/campagnes) et les
+  exécuter via une automatisation, avec supervision.
+- **IMP-007**: Éviter de lancer plusieurs OTA en parallèle et privilégier des
+  mises à jour quand le réseau est peu sollicité.
+- **IMP-008**: Si les notifications de disponibilité OTA deviennent du bruit,
   désactiver la vérification automatique et ne faire des vérifications que lors
-  d’actions planifiées.
+  de fenêtres planifiées.
 
 ## Références
 

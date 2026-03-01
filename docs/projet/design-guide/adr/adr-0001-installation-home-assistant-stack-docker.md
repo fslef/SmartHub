@@ -1,5 +1,4 @@
 ---
-title: "ADR-0001: Type d’installation Home Assistant : Docker"
 status: "Accepted"
 date: "2026-02-28"
 authors: "Équipe SmartHub"
@@ -21,33 +20,33 @@ Draft | Proposed | ==Accepted== | Rejected | Superseded | Deprecated
 
 ## Contexte
 
-Home Assistant peut être installé de plusieurs manières (Home Assistant OS,
-conteneur, environnement Python). Le choix d’installation impacte :
+Home Assistant est le cœur de mon SmartHub. Le mode d’installation conditionne
+directement la fiabilité et le coût de maintenance : mise à jour, retour arrière,
+sauvegarde/restauration et dépannage.
 
-- Les mises à jour (processus, retour arrière).
-- La sauvegarde et la restauration.
-- L’intégration avec l’infrastructure existante (réseau, supervision).
-- Le niveau de complexité opérationnelle.
+Mon SmartHub ne vit pas “tout seul” : Home Assistant s’intègre dans une
+infrastructure domestique (réseau segmenté, sauvegardes, autres services en
+conteneurs). L’enjeu est donc de choisir une installation qui reste simple et
+prédictible.
 
-Dans mon SmartHub, Home Assistant n’est pas isolé : il s’insère dans une
-infrastructure domestique plus large (réseau segmenté, sauvegardes, autres
-services en conteneurs). On cherche donc une méthode d’installation :
+Contraintes :
 
-- Reproductible (réinstallation simple, migration vers une nouvelle machine).
-- Compatible avec un flux Git (revue, historique).
-- Prévisible côté exploitation (versions maîtrisées, rollback possible).
+- Reproductibilité : réinstaller et migrer facilement vers une nouvelle machine.
+- Exploitation : versions maîtrisées et rollback possible.
+- Intégration : cohérence avec le réseau, les volumes et la stratégie de backup.
+- Traçabilité : configuration compatible avec un flux Git (revue, historique).
 
 ## Décision
 
-Installer Home Assistant sous forme **Home Assistant Container** (Docker), dans
-une **stack** pilotée par un repo Git et déployée via une tâche planifiée de
-synchronisation et de déploiement.
+Installer Home Assistant sous forme **Home Assistant Container** (Docker) et
+l’exploiter dans une **stack** décrite dans un repo Git (compose/Dockerfile),
+déployée via une tâche planifiée.
 
-Cette décision vise à rester cohérente avec :
+Principes :
 
-- Une gestion de configuration déclarative (Git comme source de vérité).
-- Une exploitation simple, reproductible et automatisable.
-- Les principes **Rester simple** et **Documenter les décisions**.
+- Git comme source de vérité (revue, historique).
+- Versions maîtrisées (pin) et rollback possible.
+- Cohérence avec les principes **Rester simple** et **Documenter les décisions**.
 
 ## Conséquences
 

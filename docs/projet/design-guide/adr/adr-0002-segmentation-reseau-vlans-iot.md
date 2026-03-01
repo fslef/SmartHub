@@ -1,5 +1,4 @@
 ---
-title: "ADR-0002: Segmentation réseau (VLAN) pour les objets connectés"
 status: "Accepted"
 date: "2026-02-28"
 authors: "Équipe SmartHub"
@@ -24,15 +23,16 @@ connectés et rendre les flux réseau plus explicites.
 
 ## Contexte
 
-Les équipements connectés (IoT, multimédia, invités) ont des profils de risque et
-des besoins réseau différents. Un réseau plat facilite les mouvements latéraux en
-cas de compromis d’un appareil et rend les diagnostics plus difficiles.
+Les équipements connectés (IoT, multimédia, invités) n’ont pas le même niveau de
+confiance ni les mêmes besoins réseau. Dans un réseau plat, un appareil compromis
+peut plus facilement atteindre des services de confiance, et les flux deviennent
+opaques.
 
-Objectifs :
+Enjeux :
 
-- Limiter l’impact d’un appareil IoT compromis.
-- Rendre explicites les flux autorisés (principe du moindre privilège).
-- Conserver une exploitation simple et stable.
+- Réduire l’impact d’un appareil IoT compromis (limiter les mouvements latéraux).
+- Rendre explicites les flux autorisés (moindre privilège).
+- Garder une exploitation simple (diagnostic, ajout d’appareils, évolutions).
 
 ## Décision
 
@@ -51,10 +51,11 @@ VLAN existants :
 Principe de filtrage :
 
 - **Deny inter-VLAN par défaut**.
-- Ouverture **au cas par cas**, en privilégiant les flux vers les services “cœur”
-  (Home Assistant, DNS, NTP) plutôt que des ouvertures larges.
+- Ouverture **au cas par cas** (règles explicites), en privilégiant les flux vers
+  les services “cœur” (Home Assistant, DNS, NTP) plutôt que des ouvertures
+  larges.
 
-Prérequis implicites :
+Prérequis :
 
 - Un routeur/firewall capable de filtrer entre VLAN.
 - Des équipements réseau managés (switch et Wi-Fi) capables de porter des VLAN.
@@ -105,10 +106,10 @@ Prérequis implicites :
 
 - **IMP-001**: Placer les équipements IoT dans **Mobile & IoT (VLAN 70)**, les
   invités dans **Guest (VLAN 59)**, le multimédia dans **Multimedia (VLAN 40)**.
-- **IMP-002**: Définir où réside le “cœur SmartHub” (Home Assistant et services
+- **IMP-002**: Définir où réside le “cœur du SmartHub” (Home Assistant et services
   associés) : **Trusted (VLAN 62)** ou **Lab 1337 (VLAN 137)**.
 - **IMP-003**: Autoriser uniquement les flux nécessaires depuis **VLAN 70** vers
-  le “cœur SmartHub” (ports/protocoles minimaux).
+  le “cœur du SmartHub” (ports/protocoles minimaux).
 - **IMP-004**: Autoriser l’administration (UI, SSH si utilisé) depuis
   **Trusted (VLAN 62)** uniquement.
 - **IMP-005**: Pour les besoins de découverte (mDNS/SSDP), préférer une
