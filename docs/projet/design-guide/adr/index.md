@@ -3,8 +3,8 @@
 Cette section regroupe les _Architecture Decision Records_ (ADR) du projet.
 
 Un ADR sert à **garder une trace courte d’un choix structurant** (réseau, sécurité,
-stockage, dépendances cloud), pour que tu n’aies pas à “réapprendre” plus tard
-pourquoi un compromis a été fait.
+stockage, dépendances cloud), pour ne pas avoir à “réapprendre” plus tard
+pourquoi un compromis ou une décision ont été prise.
 
 Concrètement, un ADR capture, de manière concise et durable :
 
