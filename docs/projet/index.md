@@ -15,7 +15,7 @@ Le projet de construction est en phase de préparation, et la construction devra
 
 En attendant, je vis dans une maison en location et je vais me servir de cette étape intermédiaire pour expérimenter et planifier au mieux ma future installation.
 
-Je ne déploierai pas dans cette maison intermédiaire toutes les automatisations que je souhaite déployer dans ma future maison.
+Dans cette maison intermédiaire, je n'ai pas de système domotique, mais j'expérimenterais certaines automatisation pour planifier au mieux ma future installation
 :::
 
 ## Remerciements
