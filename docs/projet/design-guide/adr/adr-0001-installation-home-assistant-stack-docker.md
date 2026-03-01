@@ -29,7 +29,7 @@ conteneur, environnement Python). Le choix d’installation impacte :
 - L’intégration avec l’infrastructure existante (réseau, supervision).
 - Le niveau de complexité opérationnelle.
 
-Dans SmartHub, Home Assistant n’est pas isolé : il s’insère dans une
+Dans mon SmartHub, Home Assistant n’est pas isolé : il s’insère dans une
 infrastructure domestique plus large (réseau segmenté, sauvegardes, autres
 services en conteneurs). On cherche donc une méthode d’installation :
 

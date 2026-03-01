@@ -26,7 +26,7 @@ restauration fiable, y compris après un incident sur le site.
 Une maison connectée doit pouvoir se remettre d’une panne matérielle, d’une mise à
 jour problématique ou d’une erreur de configuration.
 
-Dans SmartHub, le NAS sert déjà de cible “durable” et bénéficie d’une sauvegarde
+Dans mon SmartHub, le NAS sert déjà de cible “durable” et bénéficie d’une sauvegarde
 sur un site distant, ce qui permet de réduire le risque lié à un sinistre local.
 
 Les contraintes principales sont :

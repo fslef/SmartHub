@@ -29,7 +29,7 @@ cohérent avec le frontmatter `status` de l’ADR).
 Dans chaque ADR, le status **actif** est surligné avec la syntaxe Markdown
 `==...==` (par exemple `==Accepted==`).
 
-Statuts utilisés dans SmartHub :
+Statuts utilisés Dans mon SmartHub :
 
 - `Draft` : brouillon. L’ADR peut changer à tout moment.
 - `Proposed` : décision proposée, pas encore validée.
@@ -41,7 +41,7 @@ Statuts utilisés dans SmartHub :
 
 ## Format attendu
 
-Dans SmartHub, un ADR suit le même squelette :
+Dans mon SmartHub, un ADR suit le même squelette :
 
 - **Status** (Proposed, Accepted, Rejected, Superseded, Deprecated)
 - **Contexte**
