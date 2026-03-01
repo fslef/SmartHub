@@ -15,7 +15,7 @@ supersedes: ""
 superseded_by: ""
 ---
 
-# ADR-0006 : Gestion des mises à jour via Git + pin mensuel + Renovate
+# ADR-0006 : Mises à jour de la stack Docker et OTA Zigbee
 
 ## Status
 
@@ -32,7 +32,7 @@ elles peuvent aussi casser des intégrations ou changer des comportements.
 
 Deux sujets distincts coexistent :
 
-- **Mises à jour de la stack** (Home Assistant et services en conteneurs) : on
+- **Mises à jour de la stack Docker** (Home Assistant et services en conteneurs) : on
   veut rester à jour sans déployer “à l’aveugle”, garder une cadence maîtrisée et
   pouvoir revenir en arrière.
 - **Mises à jour OTA Zigbee** (firmwares des équipements) : elles corrigent des
@@ -42,7 +42,9 @@ Deux sujets distincts coexistent :
 
 Objectifs :
 
-- Contrôler le déploiement des versions majeures (revue des breaking changes).
+- Contrôler le déploiement des versions majeures (via une
+  [pull request (PR)](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests),
+  revue des breaking changes).
 - Déployer automatiquement les correctifs mineurs (patch).
 - Traçabilité via Git (revue, historique).
 - Automatisation sans perdre en lisibilité.
@@ -57,7 +59,8 @@ déploiement basée sur un **Dockerfile/compose** :
 - **Renovate** ouvre une PR à chaque nouvelle release.
 - **Montée de version majeure contrôlée** : la PR est revue (en particulier les
   breaking changes), puis approuvée manuellement.
-- Une tâche planifiée synchronise et déploie.
+- Une tâche planifiée (via [Dockhand](https://github.com/Finsys/dockhand))
+  synchronise et déploie.
 - **Correctifs automatiques** : les mises à jour correctives (patch) de la
   version validée sont déployées automatiquement.
 
@@ -151,3 +154,5 @@ Ces alternatives concernent les **mises à jour de la stack** (pas les OTA).
   <https://www.home-assistant.io/blog/>
 - **REF-004**: Zigbee2MQTT — OTA updates (documentation) :
   <https://www.zigbee2mqtt.io/guide/usage/ota_updates.html>
+- **REF-005**: GitHub — À propos des pull requests :
+  <https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>

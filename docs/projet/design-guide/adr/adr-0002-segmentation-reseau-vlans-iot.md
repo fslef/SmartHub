@@ -24,9 +24,9 @@ connectés et rendre les flux réseau plus explicites.
 ## Contexte
 
 Les équipements connectés (IoT, multimédia, invités) n’ont pas le même niveau de
-confiance ni les mêmes besoins réseau. Dans un réseau plat, un appareil compromis
-peut plus facilement atteindre des services de confiance, et les flux deviennent
-opaques.
+confiance ni les mêmes besoins réseau. Dans un réseau unique (non segmenté), un
+appareil compromis peut plus facilement atteindre des services de confiance, et
+les flux deviennent opaques.
 
 Enjeux :
 
@@ -82,7 +82,7 @@ Prérequis :
 
 ## Alternatives envisagées
 
-### Réseau plat
+### Réseau unique (non segmenté)
 
 - **ALT-001**: **Description**: Tous les équipements dans le même réseau.
 - **ALT-002**: **Raison de rejet**: Risque accru et absence de garde-fous entre
@@ -106,15 +106,16 @@ Prérequis :
 
 - **IMP-001**: Placer les équipements IoT dans **Mobile & IoT (VLAN 70)**, les
   invités dans **Guest (VLAN 59)**, le multimédia dans **Multimedia (VLAN 40)**.
-- **IMP-002**: Définir où réside le “cœur du SmartHub” (Home Assistant et services
-  associés) : **Trusted (VLAN 62)** ou **Lab 1337 (VLAN 137)**.
-- **IMP-003**: Autoriser uniquement les flux nécessaires depuis **VLAN 70** vers
-  le “cœur du SmartHub” (ports/protocoles minimaux).
+- **IMP-002**: Le “cœur du SmartHub” (Home Assistant et services associés) réside
+  dans **Lab 1337 (VLAN 137)**.
+- **IMP-003**: N’autoriser que les flux nécessaires entre VLAN (ports/protocoles
+  minimaux), au cas par cas.
 - **IMP-004**: Autoriser l’administration (UI, SSH si utilisé) depuis
   **Trusted (VLAN 62)** uniquement.
 - **IMP-005**: Pour les besoins de découverte (mDNS/SSDP), préférer une
   configuration explicite (reflector ciblé) plutôt que l’ouverture large entre
-  VLAN.
+  VLAN (voir la documentation UniFi :
+  [UniFi Gateway - Multicast DNS](https://help.ui.com/hc/en-us/articles/12648701398807-UniFi-Gateway-Multicast-DNS)).
 - **IMP-006**: Journaliser temporairement les refus inter-VLAN lors des phases
   d’ajout de nouveaux appareils pour ajuster finement les règles.
 
@@ -122,3 +123,13 @@ Prérequis :
 
 - **REF-001**: Guide de conception — principe **Rester simple** :
   <https://frenck.dev/the-enterprise-smart-home-syndrome/>
+- **REF-002**: UniFi — mDNS entre VLAN (Multicast DNS) :
+  <https://help.ui.com/hc/en-us/articles/12648701398807-UniFi-Gateway-Multicast-DNS>
+- **REF-003**: UniFi — Utiliser des VLAN pour sécurité et performance :
+  <https://help.ui.com/hc/en-us/articles/26136851868695-Using-VLANs-for-Network-Security-and-Performance>
+- **REF-004**: UniFi — Gérer le trafic broadcast/multicast (mDNS, Bonjour) :
+  <https://help.ui.com/hc/en-us/articles/27384925962647-Managing-Broadcast-Traffic-with-UniFi>
+- **REF-005**: UniFi — Pare-feu par zones (Zone-Based Firewalls) :
+  <https://help.ui.com/hc/en-us/articles/115003173168-Zone-Based-Firewalls-in-UniFi>
+- **REF-006**: UniFi — Gestion du trafic et des politiques (Policy Engine) :
+  <https://help.ui.com/hc/en-us/articles/5546542486551>

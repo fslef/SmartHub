@@ -40,13 +40,12 @@ Contraintes :
 
 Installer Home Assistant sous forme **Home Assistant Container** (Docker) et
 l’exploiter dans une **stack** décrite dans un repo Git (compose/Dockerfile),
-déployée via une tâche planifiée.
+déployée via [Dockhand](https://github.com/Finsys/dockhand).
 
 Principes :
 
 - Git comme source de vérité (revue, historique).
 - Versions maîtrisées (pin) et rollback possible.
-- Cohérence avec les principes **Rester simple** et **Documenter les décisions**.
 
 ## Conséquences
 
@@ -86,6 +85,8 @@ Principes :
   [ADR-0006](/projet/design-guide/adr/adr-0006-gestion-mises-a-jour-docker-renovate)).
 - **IMP-003**: Mettre en place une sauvegarde compatible “stack Docker” (voir
   [ADR-0005](/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology)).
+- **IMP-004**: Automatiser le déploiement de la stack via
+  [Dockhand](https://github.com/Finsys/dockhand).
 
 ## Références
 

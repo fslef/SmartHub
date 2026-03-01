@@ -27,9 +27,9 @@ La stabilité du réseau Zigbee dépend surtout du coordinateur : sa position
 (couverture, obstacles) et la qualité de la liaison avec Home Assistant.
 
 Dans une maison, le serveur Home Assistant est souvent placé là où c’est pratique
-(baie, bureau), pas forcément là où la radio est bonne. L’enjeu est de pouvoir
+(baie, bureau), pas forcément là où la radio est optimum. L’enjeu est de pouvoir
 positionner le coordinateur au bon endroit, sans bricolage USB et sans fragiliser
-la connexion.
+la stabilité et la qualité de la connexion.
 
 Contraintes :
 

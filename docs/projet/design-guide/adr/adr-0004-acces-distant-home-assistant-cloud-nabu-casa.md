@@ -34,14 +34,16 @@ Contraintes :
 ## Décision
 
 Utiliser **Home Assistant Cloud**, fourni par **Nabu Casa**, pour l’accès distant
-à l’instance Home Assistant.
+à l’instance Home Assistant (voir l’offre :
+[Pricing Nabu Casa](https://www.nabucasa.com/pricing/)).
 
 Critères de choix :
 
 - Éviter d’exposer directement Home Assistant sur Internet.
 - Approche “privacy-first” (chiffrement, minimisation côté tiers).
 - Exploitation simple et support officiel.
-- L’abonnement contribue au financement de Home Assistant et de l’Open Home.
+- L’abonnement contribue au financement de Home Assistant et de la
+  [Fondation Open Home](https://www.openhomefoundation.org/).
 
 ## Conséquences
 
@@ -51,8 +53,8 @@ Critères de choix :
 - **POS-002**: Réduction de la surface d’exposition Internet (pas de port-forward
   direct vers Home Assistant).
 - **POS-003**: Fonctionnalité supportée par l’écosystème officiel Home Assistant.
-- **POS-004**: Contribution au financement du travail Open Home via
-  l’abonnement.
+- **POS-004**: Contribution au financement du travail de la Fondation Open Home
+  via l’abonnement.
 
 ### Négatives
 
@@ -85,8 +87,9 @@ Critères de choix :
 - **ALT-005**: **Description**: Tunnel sortant (par exemple Cloudflare Tunnel)
   pour publier Home Assistant sans port-forward.
 - **ALT-006**: **Raison de rejet**: Dépendance à un tiers non centré Home
-  Assistant, modèle de confiance différent, intégration moins “native” et objectif
-  de soutien financier à l’écosystème Home Assistant moins direct.
+  Assistant, modèle de confiance différent, intégration moins “native”, et aussi
+  contraire au principe de simplicité (nécessite de déployer et opérer des
+  ressources dédiées).
 
 ## Notes d’implémentation
 
@@ -108,3 +111,7 @@ Critères de choix :
   <https://www.nabucasa.com/about/>
 - **REF-003**: Home Assistant — page “Home Assistant Cloud” :
   <https://www.home-assistant.io/cloud/>
+- **REF-004**: Nabu Casa — Pricing :
+  [https://www.nabucasa.com/pricing/](https://www.nabucasa.com/pricing/)
+- **REF-005**: Fondation Open Home :
+  [https://www.openhomefoundation.org/](https://www.openhomefoundation.org/)
