@@ -23,6 +23,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Le projet', link: '/projet/' },
       { text: 'Infrastructure', link: '/infrastructure/' },
+      { text: 'Intégrations', link: '/integrations/' },
     ],
 
     // Sidebar contextuelle (par préfixe d’URL)
@@ -32,6 +33,12 @@ export default defineConfig({
         {
           text: 'Infrastructure',
           items: [{ text: 'Vue d’ensemble', link: '/infrastructure/' }]
+        }
+      ],
+      '/integrations/': [
+        {
+          text: 'Intégrations',
+          items: [{ text: 'Liste', link: '/integrations/' }]
         }
       ],
       '/projet/': [
@@ -128,6 +135,10 @@ export default defineConfig({
               ]
             }
           ]
+        },
+        {
+          text: 'Intégrations',
+          items: [{ text: 'Liste', link: '/integrations/' }]
         }
       ]
     },
