@@ -58,7 +58,7 @@ export default defineConfig({
                     { text: 'Liste des ADR', link: '/projet/design-guide/adr/' },
                     {
                       text: 'ADR-0001 : Type d\'installation Home Assistant',
-                      link: '/projet/design-guide/adr/adr-0001-installation-home-assistant-stack-docker'
+                      link: '/projet/design-guide/adr/adr-0001-migration-home-assistant-os'
                     },
                     {
                       text: 'ADR-0002 : Segmentation réseau',
@@ -75,10 +75,6 @@ export default defineConfig({
                     {
                       text: 'ADR-0005 : Sauvegarde et restauration',
                       link: '/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology'
-                    },
-                    {
-                      text: 'ADR-0006 : Stratégie de mise à jour',
-                      link: '/projet/design-guide/adr/adr-0006-gestion-mises-a-jour-docker-renovate'
                     }
                   ]
                 }
@@ -108,7 +104,7 @@ export default defineConfig({
                     { text: 'Liste des ADR', link: '/projet/design-guide/adr/' },
                     {
                       text: 'ADR-0001 : Type Installation Home Assistant',
-                      link: '/projet/design-guide/adr/adr-0001-installation-home-assistant-stack-docker'
+                      link: '/projet/design-guide/adr/adr-0001-migration-home-assistant-os'
                     },
                     {
                       text: 'ADR-0002 : Segmentation réseau',
@@ -125,10 +121,6 @@ export default defineConfig({
                     {
                       text: 'ADR-0005 : Sauvegarde et restauration',
                       link: '/projet/design-guide/adr/adr-0005-sauvegarde-restauration-nas-synology'
-                    },
-                    {
-                      text: 'ADR-0006 : Stratégie de mise à jour',
-                      link: '/projet/design-guide/adr/adr-0006-gestion-mises-a-jour-docker-renovate'
                     }
                   ]
                 }
