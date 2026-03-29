@@ -4,12 +4,12 @@ Cette section décrit brièvement l’infrastructure (matériel, réseau, stocka
 
 ## Vue d’ensemble
 
-- **Calcul** : un mini PC HP qui sert d’hôte Docker pour exécuter les conteneurs.
-- **Stockage** : un NAS Synology qui héberge les données persistantes des conteneurs et les sauvegardes Home Assistant.
+- **Calcul** : un mini PC HP qui sert d'hôte pour Home Assistant OS.
+- **Stockage** : un NAS Synology qui héberge les sauvegardes Home Assistant.
 - **Réseau** : une connexion Internet qui arrive sur une Cloud Gateway UniFi, puis distribution via un switch UniFi et une borne Wi‑Fi UniFi.
 
 ::: info Détails à venir
-Je détaillerai la configuration (Docker, partages du NAS, segmentation réseau, Wi‑Fi) dans des sous-pages dédiées.
+Je détaillerai la configuration (Home Assistant OS, add-ons, partages du NAS, segmentation réseau, Wi‑Fi) dans des sous-pages dédiées.
 :::
 
 ## Schéma de l’installation
@@ -64,10 +64,10 @@ Boundary(lan, "Réseau local", "", "systemNoType") {
   Container(switch, "$iconUnifi Switch UniFi", "Commutation Ethernet", "Relie les équipements filaires du réseau local")
   Container(ap, "$iconUnifi Borne Wi‑Fi UniFi", "Point d’accès Wi‑Fi", "Fournit l’accès Wi‑Fi au réseau local")
 
-  Container(host, "$iconHp Mini PC HP", "Linux + Docker", "Hôte qui exécute les conteneurs Docker", "", "compute")
-  Container(nas, "$iconSynology NAS Synology", "Stockage réseau", "Volumes persistants Docker et sauvegardes Home Assistant", "", "storage")
+  Container(host, "$iconHp Mini PC HP", "Home Assistant OS", "Hôte qui exécute Home Assistant OS et ses add-ons", "", "compute")
+  Container(nas, "$iconSynology NAS Synology", "Stockage réseau", "Sauvegardes Home Assistant", "", "storage")
 
-  Container(ha, "$iconHomeAssistant Stack Docker Home Assistant", "Conteneur Docker", "Home Assistant, Mosquitto, Z2M, ...", "", "apps")
+  Container(ha, "$iconHomeAssistant Home Assistant OS", "Supervisor + Add-ons", "Home Assistant, Mosquitto, Z2M, ...", "", "apps")
 
   ' Force `host` et `nas` sur la même ligne
   host -[hidden]right-> nas
@@ -86,7 +86,7 @@ Rel_D(switch, host, "Ethernet")
 Rel_D(switch, nas, "Ethernet")
 
 Rel_D(host, ha, "Héberge")
-Rel(ha, nas, "Lit/écrit", "Stockage persistant + sauvegardes")
+Rel(ha, nas, "Lit/écrit", "Sauvegardes")
 
 @enduml
 ```
